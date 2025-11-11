@@ -48,6 +48,7 @@ typedef struct {
 	unsigned char *of_dest;
 
 	char filename[FILENAME_MAX_LEN];
+	char optee_filename[FILENAME_MAX_LEN];
 	char of_filename[FILENAME_MAX_LEN];
 } image_info_t;
 

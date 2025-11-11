@@ -124,6 +124,11 @@ static int load_sdcard(image_info_t *image)
 	if (ret)
 		return ret;
 
+	info("FATFS: read %s addr=%x\r\n", image->optee_dest, (unsigned int)image->optee_dest);
+	ret = fatfs_loadimage(image->optee_filename, image->optee_dest);
+	if (ret)
+		return ret;
+
 	info("FATFS: read %s addr=%x\r\n", image->filename, (unsigned int)image->dest);
 	ret = fatfs_loadimage(image->filename, image->dest);
 	if (ret)
@@ -197,6 +202,14 @@ int load_spi_nand(sunxi_spi_t *spi, image_info_t *image)
 }
 #endif
 
+// This is basically copied from nboot, although dtb isn't relative to next here
+void boot0_jmp_optee(void *optee, void *dtb, void *next)
+{
+	asm volatile ("mov r2, %0" : : "r" (dtb) : "memory");
+	asm volatile ("mov lr, %0" : : "r" (next) : "memory");
+	asm volatile ("bx      %0" : : "r" (optee) : "memory");
+}
+
 int main(void)
 {
 	board_init();
@@ -206,8 +219,6 @@ int main(void)
 	info("AWBoot r%" PRIu32 " starting...\r\n", (u32)BUILD_REVISION);
 
 	sunxi_dram_init();
-
-	unsigned int entry_point = 0;
 
 #ifdef CONFIG_ENABLE_CPU_FREQ_DUMP
 	sunxi_clk_dump();
@@ -222,6 +233,7 @@ int main(void)
 #if defined(CONFIG_BOOT_SDCARD) || defined(CONFIG_BOOT_MMC)
 
 	strcpy(image.filename, CONFIG_KERNEL_FILENAME);
+	strcpy(image.optee_filename, CONFIG_OPTEE_FILENAME);
 	strcpy(image.of_filename, CONFIG_DTB_FILENAME);
 
 	if (sunxi_sdhci_init(&sdhci0) != 0) {
@@ -276,11 +288,6 @@ _spi:
 #if defined(CONFIG_BOOT_SDCARD) || defined(CONFIG_BOOT_MMC)
 _boot:
 #endif
-	if (boot_image_setup((unsigned char *)image.dest, &entry_point)) {
-		fatal("boot setup failed\r\n");
-	}
-
-#ifdef CONFIG_BOOT_SPINAND
 	/* Boot through OP-TEE if loaded from SPI-NAND */
 	info("Initializing OP-TEE...\r\n");
 
@@ -295,46 +302,40 @@ _boot:
 	optee_sig[3]				= 0x89;
 	optee_sig[4]				= 0xE9;
 
-	/* Jump to OP-TEE for initialization */
-	void (*optee_entry)(phys_addr_t dtb);
-	optee_entry = (void (*)(phys_addr_t))image.optee_dest;
-	optee_entry((phys_addr_t)image.of_dest);
-	
-	/* OP-TEE returned! Now we can boot Linux */
-	info("OP-TEE returned successfully!\r\n");
-	info("Booting Linux at 0x%08lx with DTB at 0x%08lx\r\n", (long unsigned int)image.dest, (long unsigned int)image.of_dest);
-		
-	/* Disable MMU/caches before jumping to Linux */
+	/* Disable MMU/caches BEFORE jumping to OP-TEE (like nboot does) */
 	arm32_mmu_disable();
 	arm32_dcache_disable();
 	arm32_icache_disable();
 	arm32_interrupt_disable();
+
+	/* Create ARM trampoline that boots Linux after OPTEE returns
+	 * Pass 0x40000001 (with Thumb bit) to make OPTEE accept it, but
+	 * write ARM code at 0x40000000. OPTEE returns in ARM mode.
+	 * We cannot make OPTEE return to memory addresses in awboot.
+	 */
+	volatile uint32_t *trampoline = (volatile uint32_t *)0x40000000;
+	int idx = 0;
 	
-	/* Boot Linux kernel */
-	void (*kernel_entry)(int zero, int arch, unsigned int params);
-	kernel_entry = (void (*)(int, int, unsigned int))image.dest;
-	kernel_entry(0, 0, (unsigned int)image.of_dest);
+	// Set up Linux boot arguments: r0=0, r1=machine_id, r2=DTB
+	uint32_t dtb_addr = (uint32_t)image.of_dest;
+	trampoline[idx++] = 0xe3a00000;  // mov r0, #0
+	trampoline[idx++] = 0xe3e01000;  // mvn r1, #0  ; r1 = 0xFFFFFFFF (invalid machine ID to force DT)
+	trampoline[idx++] = 0xe3002000 | ((dtb_addr >> 0) & 0xFFF) | (((dtb_addr >> 12) & 0xF) << 16);  // movw r2, #low16(dtb)
+	trampoline[idx++] = 0xe3402000 | ((dtb_addr >> 16) & 0xFFF) | (((dtb_addr >> 28) & 0xF) << 16); // movt r2, #high16(dtb)
 	
-	/* Should never reach here */
-	fatal("Linux kernel failed to start\r\n");
-#endif
+	// Jump to kernel entry point
+	uint32_t kernel_addr = (uint32_t)image.dest;
+	trampoline[idx++] = 0xe3000000 | ((kernel_addr >> 0) & 0xFFF) | (((kernel_addr >> 12) & 0xF) << 16);  // movw r3, #low16(kernel)
+	trampoline[idx++] = 0xe3403000 | ((kernel_addr >> 16) & 0xFFF) | (((kernel_addr >> 28) & 0xF) << 16); // movt r3, #high16(kernel)
+	trampoline[idx++] = 0xe12fff13;  // bx r3
+	
+	info("ARM trampoline created at 0x40000000 (will boot Linux at 0x%08lx)\r\n", (unsigned long)image.dest);
+	
+	/* Jump to OP-TEE for initialization */
+	info("Jumping to OP-TEE, will return to 0x40000001...\r\n");
+	boot0_jmp_optee(image.optee_dest, image.of_dest, (void *)0x40000001);
 
-#if defined(CONFIG_BOOT_SDCARD) || defined(CONFIG_BOOT_MMC)
-	/* Direct boot to Linux (no OP-TEE when booting from SD/MMC) */
-	{
-		void (*kernel_entry)(int zero, int arch, unsigned int params);
-		
-		info("booting linux...\r\n");
-
-		arm32_mmu_disable();
-		arm32_dcache_disable();
-		arm32_icache_disable();
-		arm32_interrupt_disable();
-
-		kernel_entry = (void (*)(int, int, unsigned int))entry_point;
-		kernel_entry(0, 0, (unsigned int)image.of_dest);
-	}
-#endif
-
+	/* OP-TEE returned, nothing we would expect */
+	fatal("OP-TEE returned unexpectedly!\r\n");
 	return 0;
 }

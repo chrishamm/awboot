@@ -1,0 +1,46 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory '/home/christian/chrishamm/awboot'
+ 
+cp -f tools/hooks/* .git/hooks/
+echo "---------------------------------------------------------------"
+echo -n "Compiler version: "
+arm-none-eabi-gcc -v 2>&1 | tail -1
+expr `cat .build_revision` + 1 > .build_revision
+ 
+make: *** No rule to make target 'lib/libfdt/libfdt.h', needed by 'build-spi/main.o'.
+make: *** No rule to make target 'lib/libfdt/libfdt_env.h', needed by 'build-spi/main.o'.
+make: *** No rule to make target 'lib/libfdt/fdt.h', needed by 'build-spi/main.o'.
+
+echo "  CC    build-spi/lib/fdt.o"
+mkdir -p build-spi/lib
+arm-none-eabi-gcc -DCOUNTER_FREQUENCY=24000000 -mcpu=cortex-a7 -mthumb-interwork -mthumb -mno-unaligned-access -mfpu=neon-vfpv4 -mfloat-abi=hard -ffast-math -ffunction-sections -fdata-sections -Os -std=gnu99 -Wall -Werror -Wno-unused-function -g -MMD  -DLOG_LEVEL=30 -DBUILD_REVISION=6454 -include build-spi/board.h -I . -I include -I lib -I arch/arm32/include -I arch/arm32/mach-t113s3/include -I arch/arm32/mach-t113s3 -I arch/arm32/mach-t113s3/mmc -I lib/fatfs -c lib/fdt.c -o build-spi/lib/fdt.o
+ 
+echo "  CC    build-sdmmc/lib/fdt.o"
+mkdir -p build-sdmmc/lib
+arm-none-eabi-gcc -DCOUNTER_FREQUENCY=24000000 -mcpu=cortex-a7 -mthumb-interwork -mthumb -mno-unaligned-access -mfpu=neon-vfpv4 -mfloat-abi=hard -ffast-math -ffunction-sections -fdata-sections -Os -std=gnu99 -Wall -Werror -Wno-unused-function -g -MMD  -DLOG_LEVEL=30 -DBUILD_REVISION=6454 -include build-sdmmc/board.h -I . -I include -I lib -I arch/arm32/include -I arch/arm32/mach-t113s3/include -I arch/arm32/mach-t113s3 -I arch/arm32/mach-t113s3/mmc -I lib/fatfs -c lib/fdt.c -o build-sdmmc/lib/fdt.o
+ 
+echo "  CC    build-all/lib/fdt.o"
+mkdir -p build-all/lib
+arm-none-eabi-gcc -DCOUNTER_FREQUENCY=24000000 -mcpu=cortex-a7 -mthumb-interwork -mthumb -mno-unaligned-access -mfpu=neon-vfpv4 -mfloat-abi=hard -ffast-math -ffunction-sections -fdata-sections -Os -std=gnu99 -Wall -Werror -Wno-unused-function -g -MMD  -DLOG_LEVEL=30 -DBUILD_REVISION=6454 -include build-all/board.h -I . -I include -I lib -I arch/arm32/include -I arch/arm32/mach-t113s3/include -I arch/arm32/mach-t113s3 -I arch/arm32/mach-t113s3/mmc -I lib/fatfs -c lib/fdt.c -o build-all/lib/fdt.o
+ 
+make -C tools all
+ 
+echo "SPI:"
+arm-none-eabi-size build-spi/awboot-boot.elf
+cp -f build-spi/awboot-boot.bin awboot-boot-spi.bin
+cp -f build-spi/awboot-boot.bin awboot-boot-spi-4k.bin
+tools/mksunxi awboot-boot-spi.bin 8192
+tools/mksunxi awboot-boot-spi-4k.bin 8192 4096
+echo "SDMMC:"
+arm-none-eabi-size build-sdmmc/awboot-boot.elf
+cp -f build-sdmmc/awboot-boot.bin awboot-boot-sd.bin
+tools/mksunxi awboot-boot-sd.bin 512
+echo "ALL:"
+arm-none-eabi-size build-all/awboot-boot.elf
+ 
+cp -f build-all/awboot-boot.bin awboot-boot-all.bin
+cp -f build-all/awboot-boot.bin awboot-fel.bin
+tools/mksunxi awboot-fel.bin 8192
+tools/mksunxi awboot-boot-all.bin 8192
+make: Leaving directory '/home/christian/chrishamm/awboot'
+ 

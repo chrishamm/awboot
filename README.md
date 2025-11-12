@@ -1,6 +1,6 @@
 # AWBoot
 
-Small linux bootloader for Allwinner T113-S3
+Small linux bootloader for Allwinner T113-S3 modified for OP-TEE support to be used with DuetScreen
 
 ## Building
 
@@ -30,8 +30,8 @@ xfel reset
 ### FEL SPI NAND boot:
 ```
 make spi-boot.img
-xfel spi_nand
-xfel spi_nand write 0 spi-boot.img
+xfel spinand
+xfel spinand write 0 spi-boot.img
 xfel reset
 ```
 
@@ -48,6 +48,4 @@ sudo dd if=awboot-boot-sd.bin of=/dev/(your sd device) bs=1024 seek=8
 ```
 - compile (if needed) and copy your `.dtb` file to the FAT partition.
 - copy zImage to the FAT partition.
-
-### Linux kernel:
-WIP kernel from here: https://github.com/smaeul/linux/tree/d1/all
+- create cmdline.txt on the FAT partition to use a custom kernel command line

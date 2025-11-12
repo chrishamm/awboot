@@ -19,9 +19,12 @@
 
 // #define CONFIG_ENABLE_CPU_FREQ_DUMP
 
-#define CONFIG_KERNEL_FILENAME "zImage"
-#define CONFIG_OPTEE_FILENAME  "optee.bin"
-#define CONFIG_DTB_FILENAME	   "sun8i-duet3d-duetscreen-linux.dtb"
+#define CONFIG_KERNEL_FILENAME  "zImage"
+#define CONFIG_OPTEE_FILENAME   "optee.bin"
+#define CONFIG_DTB_FILENAME	    "sun8i-duet3d-duetscreen-linux.dtb"
+#define CONFIG_CMDLINE_FILENAME "cmdline.txt"
+
+#define CONFIG_DRAM_SCRATCH_BUFFER (SDRAM_BASE)
 
 #define CONFIG_OPTEE_LOAD_ADDR  (SDRAM_BASE + (27 * 1024 * 1024))
 #define CONFIG_DTB_LOAD_ADDR	(SDRAM_BASE + (64 * 1024 * 1024))

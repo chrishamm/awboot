@@ -52,6 +52,8 @@ typedef struct {
 	char of_filename[FILENAME_MAX_LEN];
 } image_info_t;
 
+#define CMDLINE_MAX_LEN 4096
+
 void	 udelay(uint64_t us);
 void	 mdelay(uint32_t ms);
 void	 sdelay(uint32_t loops);

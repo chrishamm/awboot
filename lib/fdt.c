@@ -128,8 +128,6 @@ static inline int of_blob_data_size(void *blob)
 	return (unsigned int)of_get_offset_dt_strings(blob) + of_get_dt_strings_len(blob);
 }
 
-#if 0
-
 /* -------------------------------------------------------- */
 
 /* return the token and the next token offset
@@ -227,6 +225,30 @@ static int of_get_nextnode_offset(void *blob,
 	return 0;
 }
 
+/* Safe string comparison with max length check */
+static int safe_strcmp(const char *s1, const char *s2, int maxlen)
+{
+	int i;
+	for (i = 0; i < maxlen; i++) {
+		if (s1[i] != s2[i])
+			return s1[i] - s2[i];
+		if (s1[i] == '\0')
+			return 0;
+	}
+	/* Strings equal up to maxlen */
+	return 0;
+}
+
+/* Safe string length with max limit */
+static unsigned int safe_strlen(const char *s, unsigned int maxlen)
+{
+	unsigned int len = 0;
+	while (len < maxlen && s[len] != '\0') {
+		len++;
+	}
+	return len;
+}
+
 static int of_get_node_offset(void *blob, char *name, int *offset)
 {
 	int start_offset = 0;
@@ -234,9 +256,12 @@ static int of_get_node_offset(void *blob, char *name, int *offset)
 	int nextoffset = 0;
 	int depth = 0;
 	unsigned int token;
-	unsigned int namelen = strlen(name);
+	unsigned int namelen = safe_strlen(name, 256);
 	char *nodename;
 	int ret;
+
+	if (namelen == 0 || namelen >= 256)
+		return -1;
 
 	/* find the root node*/
 	ret = of_get_token_nextoffset(blob, 0, &start_offset, &token);
@@ -253,8 +278,8 @@ static int of_get_node_offset(void *blob, char *name, int *offset)
 			return -1;
 
 		nodename = (char *)of_dt_struct_offset(blob,(nodeoffset + 4));
-		if ((memcmp(nodename, name, namelen) == 0)
-			&& (nodename[namelen] == '\0'))
+		/* Safe comparison with length check */
+		if (safe_strcmp(nodename, name, namelen + 1) == 0 && nodename[namelen] == '\0')
 			break;
 
 		start_offset = nextoffset;
@@ -351,12 +376,15 @@ static int of_get_property_offset_by_name(void *blob,
 {
 	unsigned int nameoffset;
 	unsigned int *p;
-	unsigned int namelen = strlen(name);
+	unsigned int namelen = safe_strlen(name, 256);
 	int startoffset = nodeoffset;
 	int property_offset = 0;
 	int nextoffset = 0;
 	char *string;
 	int ret;
+
+	if (namelen == 0 || namelen >= 256)
+		return -1;
 
 	*offset = 0;
 
@@ -370,8 +398,8 @@ static int of_get_property_offset_by_name(void *blob,
 						property_offset + 8);
 		nameoffset = swap_uint32(*p);
 		string = of_get_string_by_offset(blob, nameoffset);
-		if ((strlen(string) == namelen)
-			&& (memcmp(string, name, namelen) == 0)) {
+		unsigned int string_len = safe_strlen(string, 256);
+		if (string_len == namelen && safe_strcmp(string, name, namelen + 1) == 0) {
 			*offset = property_offset;
 			return 0;
 		}
@@ -387,9 +415,12 @@ static int of_string_is_find_strings_blob(void *blob,
 {
 	char *dt_strings = (char *)blob + of_get_offset_dt_strings(blob);
 	int dt_stringslen = of_get_dt_strings_len(blob);
-	int len = strlen(string) + 1;
+	int len = safe_strlen(string, 256) + 1;
 	char *lastpoint = dt_strings + dt_stringslen - len;
 	char *p;
+
+	if (len <= 1 || len > 256)
+		return -1;
 
 	for (p = dt_strings; p <= lastpoint; p++) {
 		if (memcmp(p, string, len) == 0) {
@@ -408,8 +439,11 @@ static int of_add_string_strings_blob(void *blob,
 	char *dt_strings = (char *)blob + of_get_offset_dt_strings(blob);
 	int dt_stringslen = of_get_dt_strings_len(blob);
 	char *new_string;
-	int len = strlen(string) + 1;
+	int len = safe_strlen(string, 256) + 1;
 	int ret;
+
+	if (len <= 1 || len > 256)
+		return -1;
 
 	new_string = dt_strings + dt_stringslen;
 	ret = of_blob_move_dt_string(blob, len);
@@ -527,7 +561,6 @@ static int of_set_property(void *blob,
 
 	return 0;
 }
-#endif
 
 /* ---------------------------------------------------- */
 
@@ -535,8 +568,6 @@ int check_dt_blob_valid(void *blob)
 {
 	return ((of_get_magic_number(blob) == OF_DT_MAGIC) && (of_get_format_version(blob) >= 17)) ? 0 : 1;
 }
-
-#if 0
 
 /* The /chosen node
  * property "bootargs": This zero-terminated string is passed
@@ -546,8 +577,13 @@ int fixup_chosen_node(void *blob, char *bootargs)
 {
 	int nodeoffset;
 	char *value = bootargs;
-	int valuelen = strlen(value) + 1;
+	int valuelen = safe_strlen(value, CMDLINE_MAX_LEN) + 1;
 	int ret;
+
+	if (valuelen <= 1 || valuelen > CMDLINE_MAX_LEN) {
+		debug("DT: bootargs invalid or too long\n");
+		return -1;
+	}
 
 	ret = of_get_node_offset(blob, "chosen", &nodeoffset);
 	if (ret) {
@@ -613,4 +649,3 @@ int fixup_memory_node(void *blob,
 
 	return 0;
 }
-#endif

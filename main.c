@@ -124,7 +124,7 @@ static int load_sdcard(image_info_t *image)
 	if (ret)
 		return ret;
 
-	info("FATFS: read %s addr=%x\r\n", image->optee_dest, (unsigned int)image->optee_dest);
+	info("FATFS: read %s addr=%x\r\n", image->optee_filename, (unsigned int)image->optee_dest);
 	ret = fatfs_loadimage(image->optee_filename, image->optee_dest);
 	if (ret)
 		return ret;
@@ -133,6 +133,39 @@ static int load_sdcard(image_info_t *image)
 	ret = fatfs_loadimage(image->filename, image->dest);
 	if (ret)
 		return ret;
+
+	/* apply custom cmdline if present */
+	char *cmdline_buf = (char *)CONFIG_DRAM_SCRATCH_BUFFER;
+	FIL	  cmdline_file;
+	UINT bytes_read;
+
+	fret = f_open(&cmdline_file, "cmdline.txt", FA_OPEN_EXISTING | FA_READ);
+	if (fret == FR_OK) {
+		memset(cmdline_buf, 0, CMDLINE_MAX_LEN);
+		fret = f_read(&cmdline_file, cmdline_buf, CMDLINE_MAX_LEN - 1, &bytes_read);
+		f_close(&cmdline_file);
+
+		if (fret == FR_OK && bytes_read > 0) {
+			/* strip trailing whitespace/newlines from cmdline */
+			while (bytes_read > 0 && 
+				   (cmdline_buf[bytes_read - 1] == '\n' || 
+				    cmdline_buf[bytes_read - 1] == '\r' || 
+				    cmdline_buf[bytes_read - 1] == ' ' ||
+				    cmdline_buf[bytes_read - 1] == '\t')) {
+				cmdline_buf[bytes_read - 1] = '\0';
+				bytes_read--;
+			}
+			
+			/* update bootargs */
+			info("FATFS: applying custom cmdline from cmdline.txt\r\n");
+			int ret = fixup_chosen_node(image->of_dest, cmdline_buf);
+			if (ret < 0) {
+				warning("FATFS: failed to set bootargs\r\n");
+			} else {
+				debug("FATFS: bootargs updated successfully\r\n");
+			}
+		}
+	}
 
 	/* umount fs */
 	fret = f_mount(0, "", 0);
@@ -313,7 +346,7 @@ _boot:
 	 * write ARM code at 0x40000000. OPTEE returns in ARM mode.
 	 * We cannot make OPTEE return to memory addresses in awboot.
 	 */
-	volatile uint32_t *trampoline = (volatile uint32_t *)0x40000000;
+	volatile uint32_t *trampoline = (volatile uint32_t *)CONFIG_DRAM_SCRATCH_BUFFER;
 	int idx = 0;
 	
 	// Set up Linux boot arguments: r0=0, r1=machine_id, r2=DTB
@@ -333,7 +366,7 @@ _boot:
 	
 	/* Jump to OP-TEE for initialization */
 	info("Jumping to OP-TEE, will return to 0x40000001...\r\n");
-	boot0_jmp_optee(image.optee_dest, image.of_dest, (void *)0x40000001);
+	boot0_jmp_optee(image.optee_dest, image.of_dest, (void *)(CONFIG_DRAM_SCRATCH_BUFFER + 1));
 
 	/* OP-TEE returned, nothing we would expect */
 	fatal("OP-TEE returned unexpectedly!\r\n");

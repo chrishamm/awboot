@@ -8,4 +8,10 @@
         "**/*.o": true,
     },
     "cortex-debug.variableUseNaturalFormat": true,
+    "files.associations": {
+        "*.ejs": "html",
+        "fdt.h": "c",
+        "ff.h": "c",
+        "cstring": "cpp"
+    },
 }

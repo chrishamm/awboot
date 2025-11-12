@@ -1,0 +1,2017 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 4.4.1
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2023 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Wed Nov 12 16:03:19 2025
+
+# Variables
+
+# makefile (from 'Makefile', line 35)
+KERNEL = zImage
+# environment
+GDK_BACKEND = wayland
+# environment
+LC_ALL = C
+# environment
+NO_AT_BRIDGE = 1
+# makefile (from 'Makefile', line 117)
+all_BUILD_OBJSA = $(ASRCS:%.S=$(all_OBJ_DIR)/%.o)
+# makefile (from 'Makefile', line 6)
+LOG_LEVEL = 30
+# environment
+MPD_HOST = /home/christian/.mpd/socket
+# makefile (from 'Makefile', line 114)
+sdmmc_BUILD_OBJSA = $(ASRCS:%.S=$(sdmmc_OBJ_DIR)/%.o)
+# environment
+I3SOCK = /run/user/1000/sway-ipc.1000.1600.sock
+# makefile (from 'Makefile', line 29)
+HOSTCC = gcc
+# environment
+CSF_EXCEPTION_PROMPT = 1
+# environment
+CSF_XmlOcafResource = /usr/share/opencascade/resources/XmlOcafResource
+# environment
+VSCODE_CRASH_REPORTER_PROCESS_TYPE = extensionHost
+# environment
+VSCODE_CWD = /home/christian
+# makefile (from 'Makefile', line 11)
+LIBS := -lgcc -nostdlib
+# environment
+MMGT_CLEAR = 1
+# environment
+SWAYSOCK = /run/user/1000/sway-ipc.1000.1600.sock
+# environment
+CSF_XCAFDefaults = /usr/share/opencascade/resources/StdResource
+# environment
+CSF_PluginDefaults = /usr/share/opencascade/resources/StdResource
+# makefile (from 'Makefile', line 34)
+DTB = sun8i-t113-mangopi-dual.dtb
+# environment
+CASROOT = /usr
+# environment
+LIBVIRT_DEFAULT_URI = qemu:///system
+# default
+MAKE_COMMAND := make
+# environment
+NVCC_CCBIN = /usr/bin/g++
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# environment
+GDK_DPI_SCALE = 1
+# makefile (from 'Makefile', line 117)
+all_BUILD_OBJS = $(SRCS:%.c=$(all_OBJ_DIR)/%.o)
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# default
+.VARIABLES := 
+# environment
+PWD = /home/christian/chrishamm/awboot
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# environment
+MAIL = /var/spool/mail/christian
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# makefile (from 'lib/fatfs/fatfs.mk', line 3)
+INCLUDE_DIRS := -I . -I include -I lib -I arch/arm32/include -I arch/arm32/mach-t113s3/include -I arch/arm32/mach-t113s3 -I arch/arm32/mach-t113s3/mmc -I lib/fatfs
+# automatic
+%F = $(notdir $%)
+# environment
+VSCODE_CODE_CACHE_PATH = /home/christian/.config/Code/CachedData/7d842fb85a0275a4a8e4d7e040d2625abbf7f084
+# environment
+XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session0
+# environment
+CSF_ShadersDirectory = /usr/share/opencascade/resources/Shaders
+# environment
+LANG = C
+# default
+.LOADED := 
+# default
+.INCLUDE_DIRS := /usr/local/include /usr/include
+# makefile
+MAKEFLAGS = pqrR
+# makefile
+CURDIR := /home/christian/chrishamm/awboot
+# makefile (from 'lib/fatfs/fatfs.mk', line 8)
+SRCS := main.c board.c lib/debug.c lib/xformat.c lib/fdt.c lib/string.c arch/arm32/mach-t113s3/dram.c arch/arm32/mach-t113s3/sunxi_usart.c arch/arm32/mach-t113s3/arch_timer.c arch/arm32/mach-t113s3/sunxi_spi.c arch/arm32/mach-t113s3/sunxi_dma.c arch/arm32/mach-t113s3/sunxi_gpio.c arch/arm32/mach-t113s3/sdmmc.c arch/arm32/mach-t113s3/sunxi_sdhci.c arch/arm32/mach-t113s3/sunxi_clk.c arch/arm32/mach-t113s3/exception.c lib/fatfs/ff.c lib/fatfs/diskio.c lib/fatfs/ffsystem.c lib/fatfs/ffunicode.c
+# makefile (from 'Makefile', line 114)
+sdmmc_BUILD_OBJS = $(SRCS:%.c=$(sdmmc_OBJ_DIR)/%.o)
+# environment
+VSCODE_L10N_BUNDLE_LOCATION = 
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+MFLAGS = -pqrR
+# environment
+SSH_AUTH_SOCK = /run/user/1000/gnupg/S.gpg-agent.ssh
+# default
+.SHELLFLAGS := -c
+# environment
+CSF_MDTVTexturesDirectory = /usr/share/opencascade/resources/Textures
+# environment
+WAYLAND_DISPLAY = wayland-1
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# environment
+XDG_SESSION_DESKTOP = sway
+# makefile (from 'build-all/lib/fatfs/ffunicode.d', line 1)
+MAKEFILE_LIST := Makefile arch/arch.mk lib/fatfs/fatfs.mk build-spi/arch/arm32/mach-t113s3/start.d build-spi/arch/arm32/mach-t113s3/memcpy.d build-spi/main.d build-spi/board.d build-spi/lib/debug.d build-spi/lib/xformat.d build-spi/lib/string.d build-spi/arch/arm32/mach-t113s3/dram.d build-spi/arch/arm32/mach-t113s3/sunxi_usart.d build-spi/arch/arm32/mach-t113s3/arch_timer.d build-spi/arch/arm32/mach-t113s3/sunxi_spi.d build-spi/arch/arm32/mach-t113s3/sunxi_dma.d build-spi/arch/arm32/mach-t113s3/sunxi_gpio.d build-spi/arch/arm32/mach-t113s3/sdmmc.d build-spi/arch/arm32/mach-t113s3/sunxi_sdhci.d build-spi/arch/arm32/mach-t113s3/sunxi_clk.d build-spi/arch/arm32/mach-t113s3/exception.d build-spi/lib/fatfs/ff.d build-spi/lib/fatfs/diskio.d build-spi/lib/fatfs/ffsystem.d build-spi/lib/fatfs/ffunicode.d build-sdmmc/arch/arm32/mach-t113s3/start.d build-sdmmc/arch/arm32/mach-t113s3/memcpy.d build-sdmmc/main.d build-sdmmc/board.d build-sdmmc/lib/debug.d build-sdmmc/lib/xformat.d build-sdmmc/lib/string.d build-sdmmc/arch/arm32/mach-t113s3/dram.d build-sdmmc/arch/arm32/mach-t113s3/sunxi_usart.d build-sdmmc/arch/arm32/mach-t113s3/arch_timer.d build-sdmmc/arch/arm32/mach-t113s3/sunxi_spi.d build-sdmmc/arch/arm32/mach-t113s3/sunxi_dma.d build-sdmmc/arch/arm32/mach-t113s3/sunxi_gpio.d build-sdmmc/arch/arm32/mach-t113s3/sdmmc.d build-sdmmc/arch/arm32/mach-t113s3/sunxi_sdhci.d build-sdmmc/arch/arm32/mach-t113s3/sunxi_clk.d build-sdmmc/arch/arm32/mach-t113s3/exception.d build-sdmmc/lib/fatfs/ff.d build-sdmmc/lib/fatfs/diskio.d build-sdmmc/lib/fatfs/ffsystem.d build-sdmmc/lib/fatfs/ffunicode.d build-all/arch/arm32/mach-t113s3/start.d build-all/arch/arm32/mach-t113s3/memcpy.d build-all/main.d build-all/board.d build-all/lib/debug.d build-all/lib/xformat.d build-all/lib/string.d build-all/arch/arm32/mach-t113s3/dram.d build-all/arch/arm32/mach-t113s3/sunxi_usart.d build-all/arch/arm32/mach-t113s3/arch_timer.d build-all/arch/arm32/mach-t113s3/sunxi_spi.d build-all/arch/arm32/mach-t113s3/sunxi_dma.d build-all/arch/arm32/mach-t113s3/sunxi_gpio.d build-all/arch/arm32/mach-t113s3/sdmmc.d build-all/arch/arm32/mach-t113s3/sunxi_sdhci.d build-all/arch/arm32/mach-t113s3/sunxi_clk.d build-all/arch/arm32/mach-t113s3/exception.d build-all/lib/fatfs/ff.d build-all/lib/fatfs/diskio.d build-all/lib/fatfs/ffsystem.d build-all/lib/fatfs/ffunicode.d
+# makefile (from 'Makefile', line 20)
+ASFLAGS = $(CFLAGS)
+# automatic
+@F = $(notdir $@)
+# environment
+VSCODE_PID = 1120435
+# environment
+MOZ_ENABLE_WAYLAND = 1
+# environment
+XDG_SESSION_TYPE = wayland
+# environment
+CUDA_PATH = /opt/cuda
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# makefile (from 'Makefile', line 114)
+sdmmc_OBJS = $(sdmmc_BUILD_OBJSA) $(sdmmc_BUILD_OBJS)
+# makefile (from 'Makefile', line 57)
+define VARIENT
+
+# Objects
+$(1)_OBJ_DIR = build-$(1)
+$(1)_BUILD_OBJS = $$(SRCS:%.c=$$($(1)_OBJ_DIR)/%.o)
+$(1)_BUILD_OBJSA = $$(ASRCS:%.S=$$($(1)_OBJ_DIR)/%.o)
+$(1)_OBJS = $$($(1)_BUILD_OBJSA) $$($(1)_BUILD_OBJS)
+
+build:: $$($(1)_OBJ_DIR)/$$(TARGET)-boot.elf $$($(1)_OBJ_DIR)/$$(TARGET)-boot.bin $$($(1)_OBJ_DIR)/$$(TARGET)-fel.elf $$($(1)_OBJ_DIR)/$$(TARGET)-fel.bin
+
+.PRECIOUS : $$($(1)_OBJS)
+$$($(1)_OBJ_DIR)/$$(TARGET)-fel.elf: $$($(1)_OBJS)
+	echo "  LD    $$@"
+	$$(CC) -E -P -x c -D__RAM_BASE=0x00030000 ./arch/arm32/mach-t113s3/link.ld > $$($(1)_OBJ_DIR)/link-fel.ld
+	$$(CC) $$^ -o $$@ -T $$($(1)_OBJ_DIR)/link-fel.ld $$(LDFLAGS) -Wl,-Map,$$($(1)_OBJ_DIR)/$$(TARGET)-fel.map
+
+$$($(1)_OBJ_DIR)/$$(TARGET)-boot.elf: $$($(1)_OBJS)
+	echo "  LD    $$@"
+	$$(CC) -E -P -x c -D__RAM_BASE=0x00020000 ./arch/arm32/mach-t113s3/link.ld > $$($(1)_OBJ_DIR)/link-boot.ld
+	$$(CC) $$^ -o $$@ -T $$($(1)_OBJ_DIR)/link-boot.ld $$(LDFLAGS) -Wl,-Map,$$($(1)_OBJ_DIR)/$$(TARGET)-boot.map
+
+$$($(1)_OBJ_DIR)/$$(TARGET)-fel.bin: $$($(1)_OBJ_DIR)/$$(TARGET)-fel.elf
+	@echo OBJCOPY $$@
+	$$(OBJCOPY) -O binary $$< $$@
+
+$$($(1)_OBJ_DIR)/$$(TARGET)-boot.bin: $$($(1)_OBJ_DIR)/$$(TARGET)-boot.elf
+	@echo OBJCOPY $$@
+	$$(OBJCOPY) -O binary $$< $$@
+
+$$($(1)_OBJ_DIR)/%.o : %.c
+	echo "  CC    $$@"
+	mkdir -p $$(@D)
+	$$(CC) $$(CFLAGS) -include $$($(1)_OBJ_DIR)/board.h $$(INCLUDE_DIRS) -c $$< -o $$@
+
+$$($(1)_OBJ_DIR)/%.o : %.S
+	echo "  CC    $$@"
+	mkdir -p $$(@D)
+	$$(CC) $$(ASFLAGS) $$(INCLUDE_DIRS) -c $$< -o $$@
+
+$$($(1)_OBJS): $$($(1)_OBJ_DIR)/board.h
+
+$$($(1)_OBJ_DIR)/board.h: board.h
+	echo "  GEN   $$@"
+	mkdir -p $$(@D)
+	grep -v "$(2)" >$$@ <$$<
+
+clean::
+	rm -rf $$($(1)_OBJ_DIR)
+
+-include $$(patsubst %.o,%.d,$$($(1)_OBJS))
+
+endef
+# environment
+CLUTTER_BACKEND = wayland
+# environment
+CSF_XSMessage = /usr/share/opencascade/resources/XSMessage
+# makefile (from 'Makefile', line 111)
+spi_BUILD_OBJSA = $(ASRCS:%.S=$(spi_OBJ_DIR)/%.o)
+# environment
+DRAWDEFAULT = /usr/share/opencascade/resources/DrawResources/DrawDefault
+# automatic
+*F = $(notdir $*)
+# environment
+QT_QPA_PLATFORMTHEME = qt6ct
+# environment
+CHROME_DESKTOP = code.desktop
+# environment
+CSF_SHMessage = /usr/share/opencascade/resources/SHMessage
+# environment
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# makefile (from 'Makefile', line 117)
+ 
+all_OBJS = $(all_BUILD_OBJSA) $(all_BUILD_OBJS)
+# environment
+VSCODE_NLS_CONFIG = {"userLocale":"en-us","osLocale":"en-us","resolvedLanguage":"en","defaultMessagesFile":"/opt/visual-studio-code/resources/app/out/nls.messages.json","locale":"en-us","availableLanguages":{}}
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
+# makefile
+SHELL = /bin/sh
+# default
+MAKECMDGOALS := all
+# environment
+QT_QPA_PLATFORM = wayland
+# environment
+SDL_VIDEODRIVER = wayland
+# makefile (from 'Makefile', line 12)
+DEFINES := -DLOG_LEVEL=30 -DBUILD_REVISION=6454
+# environment
+SHLVL = 3
+# environment
+CSF_TObjDefaults = /usr/share/opencascade/resources/StdResource
+# environment
+MAKELEVEL := 0
+# makefile (from 'Makefile', line 32)
+MAKE = make
+# environment
+PATH = /home/christian/.dotnet:/home/christian/.dotnet/tools:/usr/local/sbin:/usr/local/bin:/usr/bin:/opt/cuda/bin:/opt/cuda/nsight_compute:/opt/cuda/nsight_systems/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
+# default
+MAKEFILES := 
+# environment
+MOTD_SHOWN = pam
+# environment
+CSF_OCCTResourcePath = /usr/share/opencascade/resources
+# automatic
+^F = $(notdir $^)
+# makefile (from 'arch/arch.mk', line 2)
+SOC := arch/arm32/mach-t113s3
+# environment
+LC_TIME = de_DE.UTF-8
+# makefile (from 'lib/fatfs/fatfs.mk', line 1)
+FS_FAT := lib/fatfs
+# environment
+APPLICATION_INSIGHTS_NO_STATSBEAT = true
+# environment
+_JAVA_AWT_WM_NONREPARENTING = 1
+# makefile (from 'Makefile', line 26)
+SIZE = $(CROSS_COMPILE)-size
+# environment
+CSF_StandardLiteDefaults = /usr/share/opencascade/resources/StdResource
+# environment
+CSF_STEPDefaults = /usr/share/opencascade/resources/XSTEPResource
+# automatic
+?F = $(notdir $?)
+# makefile (from 'Makefile', line 3)
+CROSS_COMPILE = arm-none-eabi
+# makefile (from 'Makefile', line 111)
+spi_OBJ_DIR = build-spi
+# environment
+ELM_SCALE = 1
+# environment
+XDG_SEAT = seat0
+# environment
+XDG_CURRENT_DESKTOP = sway
+# environment
+CSF_MIGRATION_TYPES = /usr/share/opencascade/resources/StdResource/MigrationSheet.txt
+# automatic
++F = $(notdir $+)
+# environment
+XDG_SEAT_PATH = /org/freedesktop/DisplayManager/Seat0
+# environment
+DESKTOP_SESSION = sway-run
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = sway
+# makefile (from 'Makefile', line 114)
+sdmmc_OBJ_DIR = build-sdmmc
+# 'override' directive
+GNUMAKEFLAGS := 
+# makefile (from 'Makefile', line 30)
+HOSTSTRIP = strip
+# environment
+LOGNAME = christian
+# environment
+CSF_LANGUAGE = us
+# environment
+TERMINAL = foot
+# environment
+XDG_VTNR = 1
+# makefile
+.DEFAULT_GOAL := all
+# makefile (from 'arch/arch.mk', line 1)
+ARCH := arch
+# environment
+CSF_TObjMessage = /usr/share/opencascade/resources/TObj
+# environment
+DISPLAY = :0
+# environment
+USER = christian
+# default
+MAKE_VERSION := 4.4.1
+# 'override' directive
+.SHELLSTATUS := 0
+# environment
+WEBKIT_DISABLE_COMPOSITING_MODE = 1
+# makefile (from 'Makefile', line 22)
+LDFLAGS = $(CFLAGS) $(LIBS) -Wl,--gc-sections
+# environment
+DEBUGINFOD_URLS = https://debuginfod.archlinux.org 
+# makefile (from 'Makefile', line 111)
+spi_BUILD_OBJS = $(SRCS:%.c=$(spi_OBJ_DIR)/%.o)
+# environment
+_ = /usr/bin/make
+# environment
+LC_PAPER = de_DE.UTF-8
+# environment
+XDG_RUNTIME_DIR = /run/user/1000
+# makefile (from 'Makefile', line 18)
+CFLAGS = -DCOUNTER_FREQUENCY=24000000 -mcpu=cortex-a7 -mthumb-interwork -mthumb -mno-unaligned-access -mfpu=neon-vfpv4 -mfloat-abi=hard -ffast-math -ffunction-sections -fdata-sections -Os -std=gnu99 -Wall -Werror -Wno-unused-function -g -MMD $(INCLUDES) $(DEFINES)
+# environment
+COLORTERM = truecolor
+# environment
+CSF_DrawPluginDefaults = /usr/share/opencascade/resources/DrawResources
+# environment
+CSF_IGESDefaults = /usr/share/opencascade/resources/XSTEPResource
+# environment
+BEMENU_BACKEND = wayland
+# environment
+VSCODE_DOTNET_INSTALL_TOOL_ORIGINAL_HOME = /home/christian
+# environment
+XDG_SESSION_CLASS = user
+# makefile (from 'Makefile', line 117)
+all_OBJ_DIR = build-all
+# environment
+HOME = /home/christian
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+DRAWHOME = /usr/share/opencascade/resources/DrawResources
+# environment
+VSCODE_IPC_HOOK = /run/user/1000/vscode-2d645b8c-1.10-main.sock
+# environment
+TERM = foot
+# makefile (from 'arch/arch.mk', line 20)
+ASRCS = $(SOC)/start.S $(SOC)/memcpy.S
+# environment
+XDG_SESSION_ID = 1
+# makefile (from 'Makefile', line 111)
+spi_OBJS = $(spi_BUILD_OBJSA) $(spi_BUILD_OBJS)
+# environment
+XCURSOR_SIZE = 24
+# default
+.RECIPEPREFIX := 
+# automatic
+<F = $(notdir $<)
+# default
+SUFFIXES := 
+# makefile (from 'Makefile', line 2)
+TARGET := awboot
+# environment
+QT_AUTO_SCREEN_SCALE_FACTOR = 1
+# environment
+VSCODE_CLI = 1
+# environment
+ELECTRON_NO_ATTACH_CONSOLE = 1
+# environment
+CSF_StandardDefaults = /usr/share/opencascade/resources/StdResource
+# makefile (from 'Makefile', line 24)
+STRIP = $(CROSS_COMPILE)-strip
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs notintermediate shell-export archives jobserver jobserver-fifo output-sync check-symlink guile load
+# makefile (from 'Makefile', line 25)
+CC = $(CROSS_COMPILE)-gcc
+# makefile (from 'Makefile', line 27)
+OBJCOPY = $(CROSS_COMPILE)-objcopy
+# environment
+XDG_MENU_PREFIX = arch-
+# environment
+ 
+VSCODE_ESM_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# variable set hash-table stats:
+# Load=162/1024=16%, Rehash=0, Collisions=142/608=23%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (device 64768, inode 77619180): 27 files, no impossibilities.
+
+# 27 files, no impossibilities in 1 directories.
+
+# Implicit Rules
+
+build-spi/%.o: %.c
+#  recipe to execute (from 'Makefile', line 111):
+	echo "  CC    $@"
+	mkdir -p $(@D)
+	$(CC) $(CFLAGS) -include $(spi_OBJ_DIR)/board.h $(INCLUDE_DIRS) -c $< -o $@
+
+build-spi/%.o: %.S
+#  recipe to execute (from 'Makefile', line 111):
+	echo "  CC    $@"
+	mkdir -p $(@D)
+	$(CC) $(ASFLAGS) $(INCLUDE_DIRS) -c $< -o $@
+
+build-sdmmc/%.o: %.c
+#  recipe to execute (from 'Makefile', line 114):
+	echo "  CC    $@"
+	mkdir -p $(@D)
+	$(CC) $(CFLAGS) -include $(sdmmc_OBJ_DIR)/board.h $(INCLUDE_DIRS) -c $< -o $@
+
+build-sdmmc/%.o: %.S
+#  recipe to execute (from 'Makefile', line 114):
+	echo "  CC    $@"
+	mkdir -p $(@D)
+	$(CC) $(ASFLAGS) $(INCLUDE_DIRS) -c $< -o $@
+
+build-all/%.o: %.c
+#  recipe to execute (from 'Makefile', line 117):
+	echo "  CC    $@"
+	mkdir -p $(@D)
+	$(CC) $(CFLAGS) -include $(all_OBJ_DIR)/board.h $(INCLUDE_DIRS) -c $< -o $@
+
+build-all/%.o: %.S
+#  recipe to execute (from 'Makefile', line 117):
+	echo "  CC    $@"
+	mkdir -p $(@D)
+	$(CC) $(ASFLAGS) $(INCLUDE_DIRS) -c $< -o $@
+
+# 6 implicit rules, 0 (0.0%) terminal.
+# Files
+
+build-sdmmc/arch/arm32/mach-t113s3/sdmmc.o: build-sdmmc/board.h arch/arm32/mach-t113s3/sdmmc.c build-sdmmc/board.h arch/arm32/mach-t113s3/dram.h arch/arm32/mach-t113s3/sunxi_spi.h main.h include/string.h include/types.h include/io.h include/types.h lib/debug.h lib/xformat.h arch/arm32/mach-t113s3/sunxi_gpio.h arch/arm32/mach-t113s3/sunxi_usart.h arch/arm32/mach-t113s3/sunxi_sdhci.h arch/arm32/mach-t113s3/sunxi_sdhci.h arch/arm32/mach-t113s3/sdmmc.h board.h
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build-sdmmc/arch/arm32/mach-t113s3/sunxi_sdhci.o: build-sdmmc/board.h arch/arm32/mach-t113s3/sunxi_sdhci.c build-sdmmc/board.h arch/arm32/mach-t113s3/dram.h arch/arm32/mach-t113s3/sunxi_spi.h main.h include/string.h include/types.h include/io.h include/types.h lib/debug.h lib/xformat.h arch/arm32/mach-t113s3/sunxi_gpio.h arch/arm32/mach-t113s3/sunxi_usart.h arch/arm32/mach-t113s3/sunxi_sdhci.h arch/arm32/mach-t113s3/sdmmc.h arch/arm32/mach-t113s3/sunxi_sdhci.h arch/arm32/include/barrier.h arch/arm32/mach-t113s3/sunxi_clk.h arch/arm32/mach-t113s3/reg-ccu.h
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build-all/lib/string.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-11-12 15:50:34.999856102
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build-sdmmc/arch/arm32/mach-t113s3/sunxi_clk.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-11-12 15:50:34.552481202
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build-all/lib/fdt.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+build-all/arch/arm32/mach-t113s3/sunxi_sdhci.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-11-12 15:50:35.653790309
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build-all/arch/arm32/mach-t113s3/sunxi_clk.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-11-12 15:50:35.6767646
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+lib/libfdt/libfdt.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build-all/lib/xformat.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-11-12 15:50:34.967849046
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+board.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+arch/arm32/mach-t113s3/sdmmc.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+arch/arm32/mach-t113s3/sunxi_spi.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+include/string.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build-sdmmc/arch/arm32/mach-t113s3/sunxi_sdhci.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-11-12 15:50:34.529960836
+#  File has been updated.
+#  Successfully updated.
+
+build-sdmmc/arch/arm32/mach-t113s3/exception.o: build-sdmmc/board.h arch/arm32/mach-t113s3/exception.c build-sdmmc/board.h arch/arm32/mach-t113s3/dram.h arch/arm32/mach-t113s3/sunxi_spi.h main.h include/string.h include/types.h include/io.h include/types.h lib/debug.h lib/xformat.h arch/arm32/mach-t113s3/sunxi_gpio.h arch/arm32/mach-t113s3/sunxi_usart.h arch/arm32/mach-t113s3/sunxi_sdhci.h arch/arm32/include/arm32.h
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build-sdmmc/arch/arm32/mach-t113s3/memcpy.o: build-sdmmc/board.h arch/arm32/mach-t113s3/memcpy.S
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build-sdmmc/main.o: build-sdmmc/board.h main.c build-sdmmc/board.h arch/arm32/mach-t113s3/dram.h arch/arm32/mach-t113s3/sunxi_spi.h main.h include/string.h include/types.h include/io.h include/types.h lib/debug.h lib/xformat.h arch/arm32/mach-t113s3/sunxi_gpio.h arch/arm32/mach-t113s3/sunxi_usart.h arch/arm32/mach-t113s3/sunxi_sdhci.h main.h lib/libfdt/libfdt.h lib/libfdt/libfdt_env.h lib/libfdt/fdt.h lib/fatfs/ff.h lib/fatfs/ffconf.h arch/arm32/mach-t113s3/sunxi_gpio.h arch/arm32/mach-t113s3/sunxi_clk.h arch/arm32/mach-t113s3/reg-ccu.h arch/arm32/mach-t113s3/sunxi_dma.h arch/arm32/mach-t113s3/sdmmc.h arch/arm32/mach-t113s3/sunxi_sdhci.h arch/arm32/include/arm32.h arch/arm32/mach-t113s3/reg-ccu.h board.h arch/arm32/include/barrier.h
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lib/fatfs/fatfs.mk:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-25 15:38:53.925102503
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+lib/fatfs/ffsystem.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+ 
+#  File has not been updated.
+
+build-spi/arch/arm32/mach-t113s3/sunxi_gpio.o: build-spi/board.h arch/arm32/mach-t113s3/sunxi_gpio.c build-spi/board.h arch/arm32/mach-t113s3/dram.h arch/arm32/mach-t113s3/sunxi_spi.h main.h include/string.h include/types.h include/io.h include/types.h lib/debug.h lib/xformat.h arch/arm32/mach-t113s3/sunxi_gpio.h arch/arm32/mach-t113s3/sunxi_usart.h arch/arm32/mach-t113s3/sunxi_sdhci.h
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+spi-boot.img: mkboot
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 153):
+	rm -f spi-boot.img
+	dd if=$(TARGET)-boot-spi.bin of=spi-boot.img bs=2k
+	dd if=$(TARGET)-boot-spi.bin of=spi-boot.img bs=2k seek=32 # Second copy on page 32
+	dd if=$(TARGET)-boot-spi.bin of=spi-boot.img bs=2k seek=64 # Third copy on page 64
+	# dd if=linux/boot/$(DTB) of=spi-boot.img bs=2k seek=128 # DTB on page 128
+	# dd if=linux/boot/$(KERNEL) of=spi-boot.img bs=2k seek=256 # Kernel on page 256
+
+build-all/board.h: board.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 117):
+	echo "  GEN   $@"
+	mkdir -p $(@D)
+	grep -v "XXXXXXXXX" >$@ <$<
+
+build-sdmmc/lib/fatfs/ffsystem.o: build-sdmmc/board.h lib/fatfs/ffsystem.c build-sdmmc/board.h arch/arm32/mach-t113s3/dram.h arch/arm32/mach-t113s3/sunxi_spi.h main.h include/string.h include/types.h include/io.h include/types.h lib/debug.h lib/xformat.h arch/arm32/mach-t113s3/sunxi_gpio.h arch/arm32/mach-t113s3/sunxi_usart.h arch/arm32/mach-t113s3/sunxi_sdhci.h lib/fatfs/ff.h lib/fatfs/ffconf.h
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build-sdmmc/awboot-fel.bin: build-sdmmc/awboot-fel.elf
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 114):
+	@echo OBJCOPY $@
+	$(OBJCOPY) -O binary $< $@
+
+# Not a target:
+build-all/arch/arm32/mach-t113s3/sdmmc.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-11-12 15:50:35.590858216
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build-sdmmc/arch/arm32/mach-t113s3/sunxi_dma.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-11-12 15:50:34.389685018
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build-spi/arch/arm32/mach-t113s3/sdmmc.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-11-12 15:50:33.348697854
+#  File has been updated.
+#  Successfully updated.
+
+build-spi/arch/arm32/mach-t113s3/start.o: build-spi/board.h arch/arm32/mach-t113s3/start.S arch/arm32/include/linkage.h
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build-sdmmc/lib/debug.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-11-12 15:50:33.796513946
+#  File has been updated.
+#  Successfully updated.
+
+build-spi/lib/fdt.o: build-spi/board.h
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lib/fatfs/ff.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build-spi/awboot-fel.bin: build-spi/awboot-fel.elf
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 111):
+	@echo OBJCOPY $@
+	$(OBJCOPY) -O binary $< $@
+
+# Not a target:
+build-all/lib/fatfs/ffsystem.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-11-12 15:50:35.908244677
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+arch/arm32/include/linkage.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build-sdmmc/awboot-boot.bin: build-sdmmc/awboot-boot.elf
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 114):
+	@echo OBJCOPY $@
+	$(OBJCOPY) -O binary $< $@
+
+# Not a target:
+build-sdmmc/arch/arm32/mach-t113s3/sunxi_spi.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-11-12 15:50:34.350989826
+#  File has been updated.
+#  Successfully updated.
+
+build-spi/arch/arm32/mach-t113s3/sunxi_dma.o: build-spi/board.h arch/arm32/mach-t113s3/sunxi_dma.c build-spi/board.h arch/arm32/mach-t113s3/dram.h arch/arm32/mach-t113s3/sunxi_spi.h main.h include/string.h include/types.h include/io.h include/types.h lib/debug.h lib/xformat.h arch/arm32/mach-t113s3/sunxi_gpio.h arch/arm32/mach-t113s3/sunxi_usart.h arch/arm32/mach-t113s3/sunxi_sdhci.h arch/arm32/mach-t113s3/sunxi_dma.h arch/arm32/mach-t113s3/reg-ccu.h board.h
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build-spi/board.h: board.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 111):
+	echo "  GEN   $@"
+	mkdir -p $(@D)
+	grep -v "CONFIG_BOOT_SDCARD\|CONFIG_BOOT_MMC" >$@ <$<
+
+build-all/main.o: build-all/board.h main.c build-all/board.h arch/arm32/mach-t113s3/dram.h arch/arm32/mach-t113s3/sunxi_spi.h main.h include/string.h include/types.h include/io.h include/types.h lib/debug.h lib/xformat.h arch/arm32/mach-t113s3/sunxi_gpio.h arch/arm32/mach-t113s3/sunxi_usart.h arch/arm32/mach-t113s3/sunxi_sdhci.h main.h lib/libfdt/libfdt.h lib/libfdt/libfdt_env.h lib/libfdt/fdt.h lib/fatfs/ff.h lib/fatfs/ffconf.h arch/arm32/mach-t113s3/sunxi_gpio.h arch/arm32/mach-t113s3/sunxi_clk.h arch/arm32/mach-t113s3/reg-ccu.h arch/arm32/mach-t113s3/sunxi_dma.h arch/arm32/mach-t113s3/sdmmc.h arch/arm32/mach-t113s3/sunxi_sdhci.h arch/arm32/include/arm32.h arch/arm32/mach-t113s3/reg-ccu.h board.h arch/arm32/include/barrier.h
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+ 
+.PRECIOUS: build-spi/arch/arm32/mach-t113s3/start.o build-spi/arch/arm32/mach-t113s3/memcpy.o build-spi/main.o build-spi/board.o build-spi/lib/debug.o build-spi/lib/xformat.o build-spi/lib/fdt.o build-spi/lib/string.o build-spi/arch/arm32/mach-t113s3/dram.o build-spi/arch/arm32/mach-t113s3/sunxi_usart.o build-spi/arch/arm32/mach-t113s3/arch_timer.o build-spi/arch/arm32/mach-t113s3/sunxi_spi.o build-spi/arch/arm32/mach-t113s3/sunxi_dma.o build-spi/arch/arm32/mach-t113s3/sunxi_gpio.o build-spi/arch/arm32/mach-t113s3/sdmmc.o build-spi/arch/arm32/mach-t113s3/sunxi_sdhci.o build-spi/arch/arm32/mach-t113s3/sunxi_clk.o build-spi/arch/arm32/mach-t113s3/exception.o build-spi/lib/fatfs/ff.o build-spi/lib/fatfs/diskio.o build-spi/lib/fatfs/ffsystem.o build-spi/lib/fatfs/ffunicode.o build-sdmmc/arch/arm32/mach-t113s3/start.o build-sdmmc/arch/arm32/mach-t113s3/memcpy.o build-sdmmc/main.o build-sdmmc/board.o build-sdmmc/lib/debug.o build-sdmmc/lib/xformat.o build-sdmmc/lib/fdt.o build-sdmmc/lib/string.o build-sdmmc/arch/arm32/mach-t113s3/dram.o build-sdmmc/arch/arm32/mach-t113s3/sunxi_usart.o build-sdmmc/arch/arm32/mach-t113s3/arch_timer.o build-sdmmc/arch/arm32/mach-t113s3/sunxi_spi.o build-sdmmc/arch/arm32/mach-t113s3/sunxi_dma.o build-sdmmc/arch/arm32/mach-t113s3/sunxi_gpio.o build-sdmmc/arch/arm32/mach-t113s3/sdmmc.o build-sdmmc/arch/arm32/mach-t113s3/sunxi_sdhci.o build-sdmmc/arch/arm32/mach-t113s3/sunxi_clk.o build-sdmmc/arch/arm32/mach-t113s3/exception.o build-sdmmc/lib/fatfs/ff.o build-sdmmc/lib/fatfs/diskio.o build-sdmmc/lib/fatfs/ffsystem.o build-sdmmc/lib/fatfs/ffunicode.o build-all/arch/arm32/mach-t113s3/start.o build-all/arch/arm32/mach-t113s3/memcpy.o build-all/main.o build-all/board.o build-all/lib/debug.o build-all/lib/xformat.o build-all/lib/fdt.o build-all/lib/string.o build-all/arch/arm32/mach-t113s3/dram.o build-all/arch/arm32/mach-t113s3/sunxi_usart.o build-all/arch/arm32/mach-t113s3/arch_timer.o build-all/arch/arm32/mach-t113s3/sunxi_spi.o build-all/arch/arm32/mach-t113s3/sunxi_dma.o build-all/arch/arm32/mach-t113s3/sunxi_gpio.o build-all/arch/arm32/mach-t113s3/sdmmc.o build-all/arch/arm32/mach-t113s3/sunxi_sdhci.o build-all/arch/arm32/mach-t113s3/sunxi_clk.o build-all/arch/arm32/mach-t113s3/exception.o build-all/lib/fatfs/ff.o build-all/lib/fatfs/diskio.o build-all/lib/fatfs/ffsystem.o build-all/lib/fatfs/ffunicode.o
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build-spi/awboot-boot.bin: build-spi/awboot-boot.elf
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 111):
+	@echo OBJCOPY $@
+	$(OBJCOPY) -O binary $< $@
+
+build-sdmmc/awboot-boot.elf: build-sdmmc/arch/arm32/mach-t113s3/start.o build-sdmmc/arch/arm32/mach-t113s3/memcpy.o build-sdmmc/main.o build-sdmmc/board.o build-sdmmc/lib/debug.o build-sdmmc/lib/xformat.o build-sdmmc/lib/fdt.o build-sdmmc/lib/string.o build-sdmmc/arch/arm32/mach-t113s3/dram.o build-sdmmc/arch/arm32/mach-t113s3/sunxi_usart.o build-sdmmc/arch/arm32/mach-t113s3/arch_timer.o build-sdmmc/arch/arm32/mach-t113s3/sunxi_spi.o build-sdmmc/arch/arm32/mach-t113s3/sunxi_dma.o build-sdmmc/arch/arm32/mach-t113s3/sunxi_gpio.o build-sdmmc/arch/arm32/mach-t113s3/sdmmc.o build-sdmmc/arch/arm32/mach-t113s3/sunxi_sdhci.o build-sdmmc/arch/arm32/mach-t113s3/sunxi_clk.o build-sdmmc/arch/arm32/mach-t113s3/exception.o build-sdmmc/lib/fatfs/ff.o build-sdmmc/lib/fatfs/diskio.o build-sdmmc/lib/fatfs/ffsystem.o build-sdmmc/lib/fatfs/ffunicode.o
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 114):
+	echo "  LD    $@"
+	$(CC) -E -P -x c -D__RAM_BASE=0x00020000 ./arch/arm32/mach-t113s3/link.ld > $(sdmmc_OBJ_DIR)/link-boot.ld
+	$(CC) $^ -o $@ -T $(sdmmc_OBJ_DIR)/link-boot.ld $(LDFLAGS) -Wl,-Map,$(sdmmc_OBJ_DIR)/$(TARGET)-boot.map
+
+# Not a target:
+arch/arm32/mach-t113s3/sunxi_gpio.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build-spi/lib/xformat.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-11-12 15:50:32.714325637
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-11-12 16:03:16.763886809
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build-all/arch/arm32/mach-t113s3/exception.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-11-12 15:50:35.692450995
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build-all/board.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-11-12 15:50:34.907105428
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+lib/xformat.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build-spi/lib/string.o: build-spi/board.h lib/string.c build-spi/board.h arch/arm32/mach-t113s3/dram.h arch/arm32/mach-t113s3/sunxi_spi.h main.h include/string.h include/types.h include/io.h include/types.h lib/debug.h lib/xformat.h arch/arm32/mach-t113s3/sunxi_gpio.h arch/arm32/mach-t113s3/sunxi_usart.h arch/arm32/mach-t113s3/sunxi_sdhci.h
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build-spi/arch/arm32/mach-t113s3/sunxi_gpio.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-11-12 15:50:33.299765738
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build-spi/lib/debug.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-11-12 15:50:32.640691153
+#  File has been updated.
+#  Successfully updated.
+
+build-sdmmc/lib/string.o: build-sdmmc/board.h lib/string.c build-sdmmc/board.h arch/arm32/mach-t113s3/dram.h arch/arm32/mach-t113s3/sunxi_spi.h main.h include/string.h include/types.h include/io.h include/types.h lib/debug.h lib/xformat.h arch/arm32/mach-t113s3/sunxi_gpio.h arch/arm32/mach-t113s3/sunxi_usart.h arch/arm32/mach-t113s3/sunxi_sdhci.h
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build-all/lib/debug.o: build-all/board.h lib/debug.c build-all/board.h arch/arm32/mach-t113s3/dram.h arch/arm32/mach-t113s3/sunxi_spi.h main.h include/string.h include/types.h include/io.h include/types.h lib/debug.h lib/xformat.h arch/arm32/mach-t113s3/sunxi_gpio.h arch/arm32/mach-t113s3/sunxi_usart.h arch/arm32/mach-t113s3/sunxi_sdhci.h lib/debug.h board.h
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+arch/arm32/mach-t113s3/dram.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build-spi/arch/arm32/mach-t113s3/memcpy.o: build-spi/board.h arch/arm32/mach-t113s3/memcpy.S
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lib/fatfs/ffunicode.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build-all/arch/arm32/mach-t113s3/memcpy.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-11-12 15:50:34.842613936
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+lib/xformat.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lib/fatfs/diskio.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build-sdmmc/board.h: board.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 114):
+	echo "  GEN   $@"
+	mkdir -p $(@D)
+	grep -v "CONFIG_BOOT_SPINAND" >$@ <$<
+
+.SILENT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build-sdmmc/arch/arm32/mach-t113s3/memcpy.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-11-12 15:50:33.727709505
+#  File has been updated.
+#  Successfully updated.
+
+ 
+build-spi/arch/arm32/mach-t113s3/arch_timer.o: build-spi/board.h arch/arm32/mach-t113s3/arch_timer.c build-spi/board.h arch/arm32/mach-t113s3/dram.h arch/arm32/mach-t113s3/sunxi_spi.h main.h include/string.h include/types.h include/io.h include/types.h lib/debug.h lib/xformat.h arch/arm32/mach-t113s3/sunxi_gpio.h arch/arm32/mach-t113s3/sunxi_usart.h arch/arm32/mach-t113s3/sunxi_sdhci.h
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+clean::
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 111):
+	rm -rf $(spi_OBJ_DIR)
+
+clean::
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 114):
+	rm -rf $(sdmmc_OBJ_DIR)
+
+clean::
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 117):
+	rm -rf $(all_OBJ_DIR)
+
+clean::
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 120):
+	rm -f $(TARGET)-*.bin
+	rm -f $(TARGET)-*.map
+	rm -f *.img
+	rm -f *.d
+	$(MAKE) -C tools clean
+
+# Not a target:
+lib/libfdt/libfdt_env.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build-all/awboot-boot.elf: build-all/arch/arm32/mach-t113s3/start.o build-all/arch/arm32/mach-t113s3/memcpy.o build-all/main.o build-all/board.o build-all/lib/debug.o build-all/lib/xformat.o build-all/lib/fdt.o build-all/lib/string.o build-all/arch/arm32/mach-t113s3/dram.o build-all/arch/arm32/mach-t113s3/sunxi_usart.o build-all/arch/arm32/mach-t113s3/arch_timer.o build-all/arch/arm32/mach-t113s3/sunxi_spi.o build-all/arch/arm32/mach-t113s3/sunxi_dma.o build-all/arch/arm32/mach-t113s3/sunxi_gpio.o build-all/arch/arm32/mach-t113s3/sdmmc.o build-all/arch/arm32/mach-t113s3/sunxi_sdhci.o build-all/arch/arm32/mach-t113s3/sunxi_clk.o build-all/arch/arm32/mach-t113s3/exception.o build-all/lib/fatfs/ff.o build-all/lib/fatfs/diskio.o build-all/lib/fatfs/ffsystem.o build-all/lib/fatfs/ffunicode.o
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 117):
+	echo "  LD    $@"
+	$(CC) -E -P -x c -D__RAM_BASE=0x00020000 ./arch/arm32/mach-t113s3/link.ld > $(all_OBJ_DIR)/link-boot.ld
+	$(CC) $^ -o $@ -T $(all_OBJ_DIR)/link-boot.ld $(LDFLAGS) -Wl,-Map,$(all_OBJ_DIR)/$(TARGET)-boot.map
+
+# Not a target:
+arch/arm32/mach-t113s3/sunxi_usart.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build-sdmmc/lib/fatfs/diskio.o: build-sdmmc/board.h lib/fatfs/diskio.c build-sdmmc/board.h arch/arm32/mach-t113s3/dram.h arch/arm32/mach-t113s3/sunxi_spi.h main.h include/string.h include/types.h include/io.h include/types.h lib/debug.h lib/xformat.h arch/arm32/mach-t113s3/sunxi_gpio.h arch/arm32/mach-t113s3/sunxi_usart.h arch/arm32/mach-t113s3/sunxi_sdhci.h lib/fatfs/ff.h lib/fatfs/ffconf.h lib/fatfs/diskio.h arch/arm32/mach-t113s3/sdmmc.h arch/arm32/mach-t113s3/sunxi_sdhci.h arch/arm32/mach-t113s3/sunxi_dma.h board.h
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build-spi/arch/arm32/mach-t113s3/dram.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-11-12 15:50:33.153732419
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build-sdmmc/board.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-11-12 15:50:33.786508799
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build-spi/lib/fatfs/ffunicode.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-11-12 15:50:33.697946889
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+board.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build-all/lib/fatfs/ff.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-11-12 15:50:35.874473877
+#  File has been updated.
+#  Successfully updated.
+
+build-spi/main.o: build-spi/board.h main.c build-spi/board.h arch/arm32/mach-t113s3/dram.h arch/arm32/mach-t113s3/sunxi_spi.h main.h include/string.h include/types.h include/io.h include/types.h lib/debug.h lib/xformat.h arch/arm32/mach-t113s3/sunxi_gpio.h arch/arm32/mach-t113s3/sunxi_usart.h arch/arm32/mach-t113s3/sunxi_sdhci.h main.h lib/libfdt/libfdt.h lib/libfdt/libfdt_env.h lib/libfdt/fdt.h lib/fatfs/ff.h lib/fatfs/ffconf.h arch/arm32/mach-t113s3/sunxi_gpio.h arch/arm32/mach-t113s3/sunxi_clk.h arch/arm32/mach-t113s3/reg-ccu.h arch/arm32/mach-t113s3/sunxi_dma.h arch/arm32/mach-t113s3/sdmmc.h arch/arm32/mach-t113s3/sunxi_sdhci.h arch/arm32/include/arm32.h arch/arm32/mach-t113s3/reg-ccu.h board.h arch/arm32/include/barrier.h
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lib/fatfs/diskio.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build-spi/arch/arm32/mach-t113s3/sunxi_usart.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-11-12 15:50:33.174326584
+ 
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build-spi/lib/fatfs/ffsystem.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-11-12 15:50:33.670658417
+#  File has been updated.
+#  Successfully updated.
+
+build-all/arch/arm32/mach-t113s3/sunxi_spi.o: build-all/board.h arch/arm32/mach-t113s3/sunxi_spi.c build-all/board.h arch/arm32/mach-t113s3/dram.h arch/arm32/mach-t113s3/sunxi_spi.h main.h include/string.h include/types.h include/io.h include/types.h lib/debug.h lib/xformat.h arch/arm32/mach-t113s3/sunxi_gpio.h arch/arm32/mach-t113s3/sunxi_usart.h arch/arm32/mach-t113s3/sunxi_sdhci.h arch/arm32/mach-t113s3/reg-ccu.h arch/arm32/mach-t113s3/sunxi_spi.h arch/arm32/mach-t113s3/sunxi_clk.h arch/arm32/mach-t113s3/sunxi_dma.h
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+main.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build-sdmmc/arch/arm32/mach-t113s3/arch_timer.o: build-sdmmc/board.h arch/arm32/mach-t113s3/arch_timer.c build-sdmmc/board.h arch/arm32/mach-t113s3/dram.h arch/arm32/mach-t113s3/sunxi_spi.h main.h include/string.h include/types.h include/io.h include/types.h lib/debug.h lib/xformat.h arch/arm32/mach-t113s3/sunxi_gpio.h arch/arm32/mach-t113s3/sunxi_usart.h arch/arm32/mach-t113s3/sunxi_sdhci.h
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build_revision:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 45):
+	@expr `cat .build_revision` + 1 > .build_revision
+
+# Not a target:
+arch/arm32/mach-t113s3/start.S:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build-spi/lib/fatfs/diskio.o: build-spi/board.h lib/fatfs/diskio.c build-spi/board.h arch/arm32/mach-t113s3/dram.h arch/arm32/mach-t113s3/sunxi_spi.h main.h include/string.h include/types.h include/io.h include/types.h lib/debug.h lib/xformat.h arch/arm32/mach-t113s3/sunxi_gpio.h arch/arm32/mach-t113s3/sunxi_usart.h arch/arm32/mach-t113s3/sunxi_sdhci.h lib/fatfs/ff.h lib/fatfs/ffconf.h lib/fatfs/diskio.h arch/arm32/mach-t113s3/sdmmc.h arch/arm32/mach-t113s3/sunxi_sdhci.h arch/arm32/mach-t113s3/sunxi_dma.h board.h
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build-all/arch/arm32/mach-t113s3/sunxi_usart.o: build-all/board.h arch/arm32/mach-t113s3/sunxi_usart.c build-all/board.h arch/arm32/mach-t113s3/dram.h arch/arm32/mach-t113s3/sunxi_spi.h main.h include/string.h include/types.h include/io.h include/types.h lib/debug.h lib/xformat.h arch/arm32/mach-t113s3/sunxi_gpio.h arch/arm32/mach-t113s3/sunxi_usart.h arch/arm32/mach-t113s3/sunxi_sdhci.h arch/arm32/mach-t113s3/sunxi_usart.h arch/arm32/mach-t113s3/reg-ccu.h
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build-sdmmc/main.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-11-12 16:01:03.590385507
+#  File has been updated.
+#  Successfully updated.
+
+build-all/lib/xformat.o: build-all/board.h lib/xformat.c build-all/board.h arch/arm32/mach-t113s3/dram.h arch/arm32/mach-t113s3/sunxi_spi.h main.h include/string.h include/types.h include/io.h include/types.h lib/debug.h lib/xformat.h arch/arm32/mach-t113s3/sunxi_gpio.h arch/arm32/mach-t113s3/sunxi_usart.h arch/arm32/mach-t113s3/sunxi_sdhci.h
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+arch/arm32/mach-t113s3/sunxi_dma.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build-all/arch/arm32/mach-t113s3/sunxi_usart.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-11-12 15:50:35.407173522
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+arch/arm32/mach-t113s3/sunxi_clk.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+ 
+build-spi/lib/xformat.o: build-spi/board.h lib/xformat.c build-spi/board.h arch/arm32/mach-t113s3/dram.h arch/arm32/mach-t113s3/sunxi_spi.h main.h include/string.h include/types.h include/io.h include/types.h lib/debug.h lib/xformat.h arch/arm32/mach-t113s3/sunxi_gpio.h arch/arm32/mach-t113s3/sunxi_usart.h arch/arm32/mach-t113s3/sunxi_sdhci.h
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build-all/awboot-fel.bin: build-all/awboot-fel.elf
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 117):
+	@echo OBJCOPY $@
+	$(OBJCOPY) -O binary $< $@
+
+build-spi/arch/arm32/mach-t113s3/sdmmc.o: build-spi/board.h arch/arm32/mach-t113s3/sdmmc.c build-spi/board.h arch/arm32/mach-t113s3/dram.h arch/arm32/mach-t113s3/sunxi_spi.h main.h include/string.h include/types.h include/io.h include/types.h lib/debug.h lib/xformat.h arch/arm32/mach-t113s3/sunxi_gpio.h arch/arm32/mach-t113s3/sunxi_usart.h arch/arm32/mach-t113s3/sunxi_sdhci.h arch/arm32/mach-t113s3/sunxi_sdhci.h arch/arm32/mach-t113s3/sdmmc.h board.h
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build-spi/awboot-boot.elf: build-spi/arch/arm32/mach-t113s3/start.o build-spi/arch/arm32/mach-t113s3/memcpy.o build-spi/main.o build-spi/board.o build-spi/lib/debug.o build-spi/lib/xformat.o build-spi/lib/fdt.o build-spi/lib/string.o build-spi/arch/arm32/mach-t113s3/dram.o build-spi/arch/arm32/mach-t113s3/sunxi_usart.o build-spi/arch/arm32/mach-t113s3/arch_timer.o build-spi/arch/arm32/mach-t113s3/sunxi_spi.o build-spi/arch/arm32/mach-t113s3/sunxi_dma.o build-spi/arch/arm32/mach-t113s3/sunxi_gpio.o build-spi/arch/arm32/mach-t113s3/sdmmc.o build-spi/arch/arm32/mach-t113s3/sunxi_sdhci.o build-spi/arch/arm32/mach-t113s3/sunxi_clk.o build-spi/arch/arm32/mach-t113s3/exception.o build-spi/lib/fatfs/ff.o build-spi/lib/fatfs/diskio.o build-spi/lib/fatfs/ffsystem.o build-spi/lib/fatfs/ffunicode.o
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 111):
+	echo "  LD    $@"
+	$(CC) -E -P -x c -D__RAM_BASE=0x00020000 ./arch/arm32/mach-t113s3/link.ld > $(spi_OBJ_DIR)/link-boot.ld
+	$(CC) $^ -o $@ -T $(spi_OBJ_DIR)/link-boot.ld $(LDFLAGS) -Wl,-Map,$(spi_OBJ_DIR)/$(TARGET)-boot.map
+
+# Not a target:
+build-spi/lib/fdt.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+build-sdmmc/arch/arm32/mach-t113s3/sunxi_usart.o: build-sdmmc/board.h arch/arm32/mach-t113s3/sunxi_usart.c build-sdmmc/board.h arch/arm32/mach-t113s3/dram.h arch/arm32/mach-t113s3/sunxi_spi.h main.h include/string.h include/types.h include/io.h include/types.h lib/debug.h lib/xformat.h arch/arm32/mach-t113s3/sunxi_gpio.h arch/arm32/mach-t113s3/sunxi_usart.h arch/arm32/mach-t113s3/sunxi_sdhci.h arch/arm32/mach-t113s3/sunxi_usart.h arch/arm32/mach-t113s3/reg-ccu.h
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build-all/arch/arm32/mach-t113s3/arch_timer.o: build-all/board.h arch/arm32/mach-t113s3/arch_timer.c build-all/board.h arch/arm32/mach-t113s3/dram.h arch/arm32/mach-t113s3/sunxi_spi.h main.h include/string.h include/types.h include/io.h include/types.h lib/debug.h lib/xformat.h arch/arm32/mach-t113s3/sunxi_gpio.h arch/arm32/mach-t113s3/sunxi_usart.h arch/arm32/mach-t113s3/sunxi_sdhci.h
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build-sdmmc/arch/arm32/mach-t113s3/sunxi_gpio.o: build-sdmmc/board.h arch/arm32/mach-t113s3/sunxi_gpio.c build-sdmmc/board.h arch/arm32/mach-t113s3/dram.h arch/arm32/mach-t113s3/sunxi_spi.h main.h include/string.h include/types.h include/io.h include/types.h lib/debug.h lib/xformat.h arch/arm32/mach-t113s3/sunxi_gpio.h arch/arm32/mach-t113s3/sunxi_usart.h arch/arm32/mach-t113s3/sunxi_sdhci.h
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+include/io.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build-all/awboot-fel.elf: build-all/arch/arm32/mach-t113s3/start.o build-all/arch/arm32/mach-t113s3/memcpy.o build-all/main.o build-all/board.o build-all/lib/debug.o build-all/lib/xformat.o build-all/lib/fdt.o build-all/lib/string.o build-all/arch/arm32/mach-t113s3/dram.o build-all/arch/arm32/mach-t113s3/sunxi_usart.o build-all/arch/arm32/mach-t113s3/arch_timer.o build-all/arch/arm32/mach-t113s3/sunxi_spi.o build-all/arch/arm32/mach-t113s3/sunxi_dma.o build-all/arch/arm32/mach-t113s3/sunxi_gpio.o build-all/arch/arm32/mach-t113s3/sdmmc.o build-all/arch/arm32/mach-t113s3/sunxi_sdhci.o build-all/arch/arm32/mach-t113s3/sunxi_clk.o build-all/arch/arm32/mach-t113s3/exception.o build-all/lib/fatfs/ff.o build-all/lib/fatfs/diskio.o build-all/lib/fatfs/ffsystem.o build-all/lib/fatfs/ffunicode.o
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 117):
+	echo "  LD    $@"
+	$(CC) -E -P -x c -D__RAM_BASE=0x00030000 ./arch/arm32/mach-t113s3/link.ld > $(all_OBJ_DIR)/link-fel.ld
+	$(CC) $^ -o $@ -T $(all_OBJ_DIR)/link-fel.ld $(LDFLAGS) -Wl,-Map,$(all_OBJ_DIR)/$(TARGET)-fel.map
+
+# Not a target:
+build-all/main.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-11-12 16:01:03.689051828
+#  File has been updated.
+#  Successfully updated.
+
+build-all/arch/arm32/mach-t113s3/exception.o: build-all/board.h arch/arm32/mach-t113s3/exception.c build-all/board.h arch/arm32/mach-t113s3/dram.h arch/arm32/mach-t113s3/sunxi_spi.h main.h include/string.h include/types.h include/io.h include/types.h lib/debug.h lib/xformat.h arch/arm32/mach-t113s3/sunxi_gpio.h arch/arm32/mach-t113s3/sunxi_usart.h arch/arm32/mach-t113s3/sunxi_sdhci.h arch/arm32/include/arm32.h
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lib/debug.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build-all/awboot-boot.bin: build-all/awboot-boot.elf
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 117):
+	@echo OBJCOPY $@
+	$(OBJCOPY) -O binary $< $@
+
+# Not a target:
+lib/string.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build-sdmmc/arch/arm32/mach-t113s3/sunxi_gpio.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-11-12 15:50:34.408666845
+#  File has been updated.
+#  Successfully updated.
+
+build-all/board.o: build-all/board.h board.c build-all/board.h arch/arm32/mach-t113s3/dram.h arch/arm32/mach-t113s3/sunxi_spi.h main.h include/string.h include/types.h include/io.h include/types.h lib/debug.h lib/xformat.h arch/arm32/mach-t113s3/sunxi_gpio.h arch/arm32/mach-t113s3/sunxi_usart.h arch/arm32/mach-t113s3/sunxi_sdhci.h main.h board.h arch/arm32/mach-t113s3/sunxi_gpio.h arch/arm32/mach-t113s3/sdmmc.h arch/arm32/mach-t113s3/sunxi_sdhci.h
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build-sdmmc/awboot-fel.elf: build-sdmmc/arch/arm32/mach-t113s3/start.o build-sdmmc/arch/arm32/mach-t113s3/memcpy.o build-sdmmc/main.o build-sdmmc/board.o build-sdmmc/lib/debug.o build-sdmmc/lib/xformat.o build-sdmmc/lib/fdt.o build-sdmmc/lib/string.o build-sdmmc/arch/arm32/mach-t113s3/dram.o build-sdmmc/arch/arm32/mach-t113s3/sunxi_usart.o build-sdmmc/arch/arm32/mach-t113s3/arch_timer.o build-sdmmc/arch/arm32/mach-t113s3/sunxi_spi.o build-sdmmc/arch/arm32/mach-t113s3/sunxi_dma.o build-sdmmc/arch/arm32/mach-t113s3/sunxi_gpio.o build-sdmmc/arch/arm32/mach-t113s3/sdmmc.o build-sdmmc/arch/arm32/mach-t113s3/sunxi_sdhci.o build-sdmmc/arch/arm32/mach-t113s3/sunxi_clk.o build-sdmmc/arch/arm32/mach-t113s3/exception.o build-sdmmc/lib/fatfs/ff.o build-sdmmc/lib/fatfs/diskio.o build-sdmmc/lib/fatfs/ffsystem.o build-sdmmc/lib/fatfs/ffunicode.o
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 114):
+	echo "  LD    $@"
+	$(CC) -E -P -x c -D__RAM_BASE=0x00030000 ./arch/arm32/mach-t113s3/link.ld > $(sdmmc_OBJ_DIR)/link-fel.ld
+	$(CC) $^ -o $@ -T $(sdmmc_OBJ_DIR)/link-fel.ld $(LDFLAGS) -Wl,-Map,$(sdmmc_OBJ_DIR)/$(TARGET)-fel.map
+
+mkboot: build tools
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 133):
+	echo "SPI:"
+	$(SIZE) build-spi/$(TARGET)-boot.elf
+	cp -f build-spi/$(TARGET)-boot.bin $(TARGET)-boot-spi.bin
+	cp -f build-spi/$(TARGET)-boot.bin $(TARGET)-boot-spi-4k.bin
+	tools/mksunxi $(TARGET)-boot-spi.bin 8192
+	tools/mksunxi $(TARGET)-boot-spi-4k.bin 8192 4096
+	echo "SDMMC:"
+	$(SIZE) build-sdmmc/$(TARGET)-boot.elf
+	cp -f build-sdmmc/$(TARGET)-boot.bin $(TARGET)-boot-sd.bin
+	tools/mksunxi $(TARGET)-boot-sd.bin 512
+	echo "ALL:"
+	$(SIZE) build-all/$(TARGET)-boot.elf
+	cp -f build-all/$(TARGET)-boot.bin $(TARGET)-boot-all.bin
+	cp -f build-all/$(TARGET)-boot.bin $(TARGET)-fel.bin
+	tools/mksunxi $(TARGET)-fel.bin 8192
+	tools/mksunxi $(TARGET)-boot-all.bin 8192
+
+ 
+build-all/arch/arm32/mach-t113s3/dram.o: build-all/board.h arch/arm32/mach-t113s3/dram.c build-all/board.h arch/arm32/mach-t113s3/dram.h arch/arm32/mach-t113s3/sunxi_spi.h main.h include/string.h include/types.h include/io.h include/types.h lib/debug.h lib/xformat.h arch/arm32/mach-t113s3/sunxi_gpio.h arch/arm32/mach-t113s3/sunxi_usart.h arch/arm32/mach-t113s3/sunxi_sdhci.h arch/arm32/mach-t113s3/dram.h arch/arm32/mach-t113s3/reg-ccu.h arch/arm32/mach-t113s3/reg-dram.h board.h
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build-spi/board.o: build-spi/board.h board.c build-spi/board.h arch/arm32/mach-t113s3/dram.h arch/arm32/mach-t113s3/sunxi_spi.h main.h include/string.h include/types.h include/io.h include/types.h lib/debug.h lib/xformat.h arch/arm32/mach-t113s3/sunxi_gpio.h arch/arm32/mach-t113s3/sunxi_usart.h arch/arm32/mach-t113s3/sunxi_sdhci.h main.h board.h arch/arm32/mach-t113s3/sunxi_gpio.h arch/arm32/mach-t113s3/sdmmc.h arch/arm32/mach-t113s3/sunxi_sdhci.h
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build-spi/arch/arm32/mach-t113s3/exception.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-11-12 15:50:33.449810298
+#  File has been updated.
+#  Successfully updated.
+
+git:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  Implicit/static pattern stem: ''
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := git
+# automatic
+# * := 
+# automatic
+# < := 
+# automatic
+# + := 
+# automatic
+# % := 
+# automatic
+# ^ := 
+# automatic
+# ? := 
+# automatic
+# | := 
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=1/11=9%
+#  recipe to execute (from 'Makefile', line 51):
+	cp -f tools/hooks/* .git/hooks/
+
+# Not a target:
+arch/arm32/mach-t113s3/sdmmc.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build-sdmmc/lib/fatfs/ff.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-11-12 15:50:34.751990061
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build-spi/lib/fatfs/ff.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-11-12 15:50:33.637610238
+#  File has been updated.
+#  Successfully updated.
+
+build-sdmmc/lib/fatfs/ff.o: build-sdmmc/board.h lib/fatfs/ff.c build-sdmmc/board.h arch/arm32/mach-t113s3/dram.h arch/arm32/mach-t113s3/sunxi_spi.h main.h include/string.h include/types.h include/io.h include/types.h lib/debug.h lib/xformat.h arch/arm32/mach-t113s3/sunxi_gpio.h arch/arm32/mach-t113s3/sunxi_usart.h arch/arm32/mach-t113s3/sunxi_sdhci.h lib/fatfs/ff.h lib/fatfs/ffconf.h lib/fatfs/diskio.h
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build-spi/arch/arm32/mach-t113s3/sunxi_usart.o: build-spi/board.h arch/arm32/mach-t113s3/sunxi_usart.c build-spi/board.h arch/arm32/mach-t113s3/dram.h arch/arm32/mach-t113s3/sunxi_spi.h main.h include/string.h include/types.h include/io.h include/types.h lib/debug.h lib/xformat.h arch/arm32/mach-t113s3/sunxi_gpio.h arch/arm32/mach-t113s3/sunxi_usart.h arch/arm32/mach-t113s3/sunxi_sdhci.h arch/arm32/mach-t113s3/sunxi_usart.h arch/arm32/mach-t113s3/reg-ccu.h
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build-spi/arch/arm32/mach-t113s3/memcpy.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-11-12 15:50:32.582320758
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build-spi/arch/arm32/mach-t113s3/sunxi_clk.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-11-12 15:50:33.43449949
+#  File has been updated.
+#  Successfully updated.
+
+all: git begin build mkboot
+#  Command line target.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/3=0%
+
+# Not a target:
+build-sdmmc/lib/fatfs/diskio.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-11-12 15:50:34.777948466
+#  File has been updated.
+#  Successfully updated.
+
+build-all/arch/arm32/mach-t113s3/sunxi_sdhci.o: build-all/board.h arch/arm32/mach-t113s3/sunxi_sdhci.c build-all/board.h arch/arm32/mach-t113s3/dram.h arch/arm32/mach-t113s3/sunxi_spi.h main.h include/string.h include/types.h include/io.h include/types.h lib/debug.h lib/xformat.h arch/arm32/mach-t113s3/sunxi_gpio.h arch/arm32/mach-t113s3/sunxi_usart.h arch/arm32/mach-t113s3/sunxi_sdhci.h arch/arm32/mach-t113s3/sdmmc.h arch/arm32/mach-t113s3/sunxi_sdhci.h arch/arm32/include/barrier.h arch/arm32/mach-t113s3/sunxi_clk.h arch/arm32/mach-t113s3/reg-ccu.h
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build-all/arch/arm32/mach-t113s3/arch_timer.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-11-12 15:50:35.421493622
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build-sdmmc/arch/arm32/mach-t113s3/arch_timer.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-11-12 15:50:34.300961054
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build-all/arch/arm32/mach-t113s3/sunxi_spi.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-11-12 15:50:35.474376324
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+arch/arm32/mach-t113s3/sunxi_spi.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build-spi/awboot-fel.elf: build-spi/arch/arm32/mach-t113s3/start.o build-spi/arch/arm32/mach-t113s3/memcpy.o build-spi/main.o build-spi/board.o build-spi/lib/debug.o build-spi/lib/xformat.o build-spi/lib/fdt.o build-spi/lib/string.o build-spi/arch/arm32/mach-t113s3/dram.o build-spi/arch/arm32/mach-t113s3/sunxi_usart.o build-spi/arch/arm32/mach-t113s3/arch_timer.o build-spi/arch/arm32/mach-t113s3/sunxi_spi.o build-spi/arch/arm32/mach-t113s3/sunxi_dma.o build-spi/arch/arm32/mach-t113s3/sunxi_gpio.o build-spi/arch/arm32/mach-t113s3/sdmmc.o build-spi/arch/arm32/mach-t113s3/sunxi_sdhci.o build-spi/arch/arm32/mach-t113s3/sunxi_clk.o build-spi/arch/arm32/mach-t113s3/exception.o build-spi/lib/fatfs/ff.o build-spi/lib/fatfs/diskio.o build-spi/lib/fatfs/ffsystem.o build-spi/lib/fatfs/ffunicode.o
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 111):
+	echo "  LD    $@"
+	$(CC) -E -P -x c -D__RAM_BASE=0x00030000 ./arch/arm32/mach-t113s3/link.ld > $(spi_OBJ_DIR)/link-fel.ld
+	$(CC) $^ -o $@ -T $(spi_OBJ_DIR)/link-fel.ld $(LDFLAGS) -Wl,-Map,$(spi_OBJ_DIR)/$(TARGET)-fel.map
+
+build:: build_revision
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+build:: build-spi/awboot-boot.elf build-spi/awboot-boot.bin build-spi/awboot-fel.elf build-spi/awboot-fel.bin
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+build:: build-sdmmc/awboot-boot.elf build-sdmmc/awboot-boot.bin build-sdmmc/awboot-fel.elf build-sdmmc/awboot-fel.bin
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+build:: build-all/awboot-boot.elf build-all/awboot-boot.bin build-all/awboot-fel.elf build-all/awboot-fel.bin
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+# Not a target:
+build-all/lib/debug.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-11-12 15:50:34.917434265
+#  File has been updated.
+#  Successfully updated.
+
+build-spi/lib/fatfs/ffsystem.o: build-spi/board.h lib/fatfs/ffsystem.c build-spi/board.h arch/arm32/mach-t113s3/dram.h arch/arm32/mach-t113s3/sunxi_spi.h main.h include/string.h include/types.h include/io.h include/types.h lib/debug.h lib/xformat.h arch/arm32/mach-t113s3/sunxi_gpio.h arch/arm32/mach-t113s3/sunxi_usart.h arch/arm32/mach-t113s3/sunxi_sdhci.h lib/fatfs/ff.h lib/fatfs/ffconf.h
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build-sdmmc/arch/arm32/mach-t113s3/sunxi_spi.o: build-sdmmc/board.h arch/arm32/mach-t113s3/sunxi_spi.c build-sdmmc/board.h arch/arm32/mach-t113s3/dram.h arch/arm32/mach-t113s3/sunxi_spi.h main.h include/string.h include/types.h include/io.h include/types.h lib/debug.h lib/xformat.h arch/arm32/mach-t113s3/sunxi_gpio.h arch/arm32/mach-t113s3/sunxi_usart.h arch/arm32/mach-t113s3/sunxi_sdhci.h arch/arm32/mach-t113s3/reg-ccu.h arch/arm32/mach-t113s3/sunxi_spi.h arch/arm32/mach-t113s3/sunxi_clk.h arch/arm32/mach-t113s3/sunxi_dma.h
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build-all/lib/fdt.o: build-all/board.h
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+main.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build-all/arch/arm32/mach-t113s3/sunxi_gpio.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-11-12 15:50:35.532373936
+#  File has been updated.
+#  Successfully updated.
+
+build-spi/lib/fatfs/ff.o: build-spi/board.h lib/fatfs/ff.c build-spi/board.h arch/arm32/mach-t113s3/dram.h arch/arm32/mach-t113s3/sunxi_spi.h main.h include/string.h include/types.h include/io.h include/types.h lib/debug.h lib/xformat.h arch/arm32/mach-t113s3/sunxi_gpio.h arch/arm32/mach-t113s3/sunxi_usart.h arch/arm32/mach-t113s3/sunxi_sdhci.h lib/fatfs/ff.h lib/fatfs/ffconf.h lib/fatfs/diskio.h
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build-sdmmc/arch/arm32/mach-t113s3/dram.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-11-12 15:50:34.263476875
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build-spi/arch/arm32/mach-t113s3/start.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-11-12 15:50:32.57739271
+#  File has been updated.
+#  Successfully updated.
+
+build-all/arch/arm32/mach-t113s3/sunxi_dma.o: build-all/board.h arch/arm32/mach-t113s3/sunxi_dma.c build-all/board.h arch/arm32/mach-t113s3/dram.h arch/arm32/mach-t113s3/sunxi_spi.h main.h include/string.h include/types.h include/io.h include/types.h lib/debug.h lib/xformat.h arch/arm32/mach-t113s3/sunxi_gpio.h arch/arm32/mach-t113s3/sunxi_usart.h arch/arm32/mach-t113s3/sunxi_sdhci.h arch/arm32/mach-t113s3/sunxi_dma.h arch/arm32/mach-t113s3/reg-ccu.h board.h
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build-spi/arch/arm32/mach-t113s3/sunxi_spi.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-11-12 15:50:33.241761624
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+arch/arm32/mach-t113s3/sunxi_sdhci.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+arch/arm32/mach-t113s3/sunxi_dma.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+arch/arm32/mach-t113s3/reg-ccu.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+ 
+build-sdmmc/lib/fatfs/ffunicode.o: build-sdmmc/board.h lib/fatfs/ffunicode.c build-sdmmc/board.h arch/arm32/mach-t113s3/dram.h arch/arm32/mach-t113s3/sunxi_spi.h main.h include/string.h include/types.h include/io.h include/types.h lib/debug.h lib/xformat.h arch/arm32/mach-t113s3/sunxi_gpio.h arch/arm32/mach-t113s3/sunxi_usart.h arch/arm32/mach-t113s3/sunxi_sdhci.h lib/fatfs/ff.h lib/fatfs/ffconf.h
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build-sdmmc/lib/fatfs/ffunicode.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-11-12 15:50:34.811931917
+#  File has been updated.
+#  Successfully updated.
+
+build-sdmmc/lib/debug.o: build-sdmmc/board.h lib/debug.c build-sdmmc/board.h arch/arm32/mach-t113s3/dram.h arch/arm32/mach-t113s3/sunxi_spi.h main.h include/string.h include/types.h include/io.h include/types.h lib/debug.h lib/xformat.h arch/arm32/mach-t113s3/sunxi_gpio.h arch/arm32/mach-t113s3/sunxi_usart.h arch/arm32/mach-t113s3/sunxi_sdhci.h lib/debug.h board.h
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lib/debug.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build-sdmmc/arch/arm32/mach-t113s3/sunxi_dma.o: build-sdmmc/board.h arch/arm32/mach-t113s3/sunxi_dma.c build-sdmmc/board.h arch/arm32/mach-t113s3/dram.h arch/arm32/mach-t113s3/sunxi_spi.h main.h include/string.h include/types.h include/io.h include/types.h lib/debug.h lib/xformat.h arch/arm32/mach-t113s3/sunxi_gpio.h arch/arm32/mach-t113s3/sunxi_usart.h arch/arm32/mach-t113s3/sunxi_sdhci.h arch/arm32/mach-t113s3/sunxi_dma.h arch/arm32/mach-t113s3/reg-ccu.h board.h
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build-spi/arch/arm32/mach-t113s3/sunxi_sdhci.o: build-spi/board.h arch/arm32/mach-t113s3/sunxi_sdhci.c build-spi/board.h arch/arm32/mach-t113s3/dram.h arch/arm32/mach-t113s3/sunxi_spi.h main.h include/string.h include/types.h include/io.h include/types.h lib/debug.h lib/xformat.h arch/arm32/mach-t113s3/sunxi_gpio.h arch/arm32/mach-t113s3/sunxi_usart.h arch/arm32/mach-t113s3/sunxi_sdhci.h arch/arm32/mach-t113s3/sdmmc.h arch/arm32/mach-t113s3/sunxi_sdhci.h arch/arm32/include/barrier.h arch/arm32/mach-t113s3/sunxi_clk.h arch/arm32/mach-t113s3/reg-ccu.h
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lib/fatfs/ffconf.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build-sdmmc/lib/fdt.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+build-spi/lib/fatfs/diskio.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-11-12 15:50:33.663248992
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build-spi/board.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-11-12 15:50:32.628955424
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+arch/arm32/include/barrier.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build-spi/arch/arm32/mach-t113s3/sunxi_sdhci.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-11-12 15:50:33.412102888
+#  File has been updated.
+#  Successfully updated.
+
+build-spi/arch/arm32/mach-t113s3/exception.o: build-spi/board.h arch/arm32/mach-t113s3/exception.c build-spi/board.h arch/arm32/mach-t113s3/dram.h arch/arm32/mach-t113s3/sunxi_spi.h main.h include/string.h include/types.h include/io.h include/types.h lib/debug.h lib/xformat.h arch/arm32/mach-t113s3/sunxi_gpio.h arch/arm32/mach-t113s3/sunxi_usart.h arch/arm32/mach-t113s3/sunxi_sdhci.h arch/arm32/include/arm32.h
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build-all/lib/fatfs/ffunicode.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-11-12 15:50:35.935279662
+#  File has been updated.
+#  Successfully updated.
+
+build-all/arch/arm32/mach-t113s3/memcpy.o: build-all/board.h arch/arm32/mach-t113s3/memcpy.S
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+arch/arm32/mach-t113s3/sunxi_clk.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build-sdmmc/arch/arm32/mach-t113s3/dram.o: build-sdmmc/board.h arch/arm32/mach-t113s3/dram.c build-sdmmc/board.h arch/arm32/mach-t113s3/dram.h arch/arm32/mach-t113s3/sunxi_spi.h main.h include/string.h include/types.h include/io.h include/types.h lib/debug.h lib/xformat.h arch/arm32/mach-t113s3/sunxi_gpio.h arch/arm32/mach-t113s3/sunxi_usart.h arch/arm32/mach-t113s3/sunxi_sdhci.h arch/arm32/mach-t113s3/dram.h arch/arm32/mach-t113s3/reg-ccu.h arch/arm32/mach-t113s3/reg-dram.h board.h
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build-all/arch/arm32/mach-t113s3/start.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-11-12 15:50:34.837944185
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+arch/arm32/mach-t113s3/sunxi_sdhci.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+include/types.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build-sdmmc/arch/arm32/mach-t113s3/sunxi_usart.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-11-12 15:50:34.285554826
+#  File has been updated.
+#  Successfully updated.
+
+build-all/arch/arm32/mach-t113s3/sdmmc.o: build-all/board.h arch/arm32/mach-t113s3/sdmmc.c build-all/board.h arch/arm32/mach-t113s3/dram.h arch/arm32/mach-t113s3/sunxi_spi.h main.h include/string.h include/types.h include/io.h include/types.h lib/debug.h lib/xformat.h arch/arm32/mach-t113s3/sunxi_gpio.h arch/arm32/mach-t113s3/sunxi_usart.h arch/arm32/mach-t113s3/sunxi_sdhci.h arch/arm32/mach-t113s3/sunxi_sdhci.h arch/arm32/mach-t113s3/sdmmc.h board.h
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lib/libfdt/fdt.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build-spi/arch/arm32/mach-t113s3/sunxi_spi.o: build-spi/board.h arch/arm32/mach-t113s3/sunxi_spi.c build-spi/board.h arch/arm32/mach-t113s3/dram.h arch/arm32/mach-t113s3/sunxi_spi.h main.h include/string.h include/types.h include/io.h include/types.h lib/debug.h lib/xformat.h arch/arm32/mach-t113s3/sunxi_gpio.h arch/arm32/mach-t113s3/sunxi_usart.h arch/arm32/mach-t113s3/sunxi_sdhci.h arch/arm32/mach-t113s3/reg-ccu.h arch/arm32/mach-t113s3/sunxi_spi.h arch/arm32/mach-t113s3/sunxi_clk.h arch/arm32/mach-t113s3/sunxi_dma.h
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+format:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 127):
+	find . -iname "*.h" -o -iname "*.c" | xargs clang-format --verbose -i
+
+# Not a target:
+build-sdmmc/lib/xformat.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-11-12 15:50:33.8452701
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build-spi/arch/arm32/mach-t113s3/arch_timer.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-11-12 15:50:33.189633344
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build-sdmmc/arch/arm32/mach-t113s3/exception.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+ 
+#  Last modified 2025-11-12 15:50:34.56918784
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+arch/arm32/mach-t113s3/memcpy.S:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build-spi/lib/string.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-11-12 15:50:32.756569057
+#  File has been updated.
+#  Successfully updated.
+
+build-spi/arch/arm32/mach-t113s3/dram.o: build-spi/board.h arch/arm32/mach-t113s3/dram.c build-spi/board.h arch/arm32/mach-t113s3/dram.h arch/arm32/mach-t113s3/sunxi_spi.h main.h include/string.h include/types.h include/io.h include/types.h lib/debug.h lib/xformat.h arch/arm32/mach-t113s3/sunxi_gpio.h arch/arm32/mach-t113s3/sunxi_usart.h arch/arm32/mach-t113s3/sunxi_sdhci.h arch/arm32/mach-t113s3/dram.h arch/arm32/mach-t113s3/reg-ccu.h arch/arm32/mach-t113s3/reg-dram.h board.h
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build-all/lib/fatfs/diskio.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-11-12 15:50:35.900182452
+#  File has been updated.
+#  Successfully updated.
+
+tools:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 130):
+	$(MAKE) -C tools all
+
+build-spi/arch/arm32/mach-t113s3/sunxi_clk.o: build-spi/board.h arch/arm32/mach-t113s3/sunxi_clk.c build-spi/board.h arch/arm32/mach-t113s3/dram.h arch/arm32/mach-t113s3/sunxi_spi.h main.h include/string.h include/types.h include/io.h include/types.h lib/debug.h lib/xformat.h arch/arm32/mach-t113s3/sunxi_gpio.h arch/arm32/mach-t113s3/sunxi_usart.h arch/arm32/mach-t113s3/sunxi_sdhci.h board.h arch/arm32/mach-t113s3/sunxi_clk.h arch/arm32/mach-t113s3/reg-ccu.h
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build-all/arch/arm32/mach-t113s3/sunxi_gpio.o: build-all/board.h arch/arm32/mach-t113s3/sunxi_gpio.c build-all/board.h arch/arm32/mach-t113s3/dram.h arch/arm32/mach-t113s3/sunxi_spi.h main.h include/string.h include/types.h include/io.h include/types.h lib/debug.h lib/xformat.h arch/arm32/mach-t113s3/sunxi_gpio.h arch/arm32/mach-t113s3/sunxi_usart.h arch/arm32/mach-t113s3/sunxi_sdhci.h
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build-all/lib/fatfs/diskio.o: build-all/board.h lib/fatfs/diskio.c build-all/board.h arch/arm32/mach-t113s3/dram.h arch/arm32/mach-t113s3/sunxi_spi.h main.h include/string.h include/types.h include/io.h include/types.h lib/debug.h lib/xformat.h arch/arm32/mach-t113s3/sunxi_gpio.h arch/arm32/mach-t113s3/sunxi_usart.h arch/arm32/mach-t113s3/sunxi_sdhci.h lib/fatfs/ff.h lib/fatfs/ffconf.h lib/fatfs/diskio.h arch/arm32/mach-t113s3/sdmmc.h arch/arm32/mach-t113s3/sunxi_sdhci.h arch/arm32/mach-t113s3/sunxi_dma.h board.h
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build-all/arch/arm32/mach-t113s3/sunxi_dma.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-11-12 15:50:35.513086494
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build-spi/arch/arm32/mach-t113s3/sunxi_dma.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-11-12 15:50:33.281089318
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build-sdmmc/arch/arm32/mach-t113s3/start.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-11-12 15:50:33.723263525
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build-sdmmc/lib/fatfs/ffsystem.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-11-12 15:50:34.785770038
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+lib/fatfs/ff.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build-all/lib/fatfs/ffsystem.o: build-all/board.h lib/fatfs/ffsystem.c build-all/board.h arch/arm32/mach-t113s3/dram.h arch/arm32/mach-t113s3/sunxi_spi.h main.h include/string.h include/types.h include/io.h include/types.h lib/debug.h lib/xformat.h arch/arm32/mach-t113s3/sunxi_gpio.h arch/arm32/mach-t113s3/sunxi_usart.h arch/arm32/mach-t113s3/sunxi_sdhci.h lib/fatfs/ff.h lib/fatfs/ffconf.h
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build-sdmmc/board.o: build-sdmmc/board.h board.c build-sdmmc/board.h arch/arm32/mach-t113s3/dram.h arch/arm32/mach-t113s3/sunxi_spi.h main.h include/string.h include/types.h include/io.h include/types.h lib/debug.h lib/xformat.h arch/arm32/mach-t113s3/sunxi_gpio.h arch/arm32/mach-t113s3/sunxi_usart.h arch/arm32/mach-t113s3/sunxi_sdhci.h main.h board.h arch/arm32/mach-t113s3/sunxi_gpio.h arch/arm32/mach-t113s3/sdmmc.h arch/arm32/mach-t113s3/sunxi_sdhci.h
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build-spi/lib/fatfs/ffunicode.o: build-spi/board.h lib/fatfs/ffunicode.c build-spi/board.h arch/arm32/mach-t113s3/dram.h arch/arm32/mach-t113s3/sunxi_spi.h main.h include/string.h include/types.h include/io.h include/types.h lib/debug.h lib/xformat.h arch/arm32/mach-t113s3/sunxi_gpio.h arch/arm32/mach-t113s3/sunxi_usart.h arch/arm32/mach-t113s3/sunxi_sdhci.h lib/fatfs/ff.h lib/fatfs/ffconf.h
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build-all/lib/string.o: build-all/board.h lib/string.c build-all/board.h arch/arm32/mach-t113s3/dram.h arch/arm32/mach-t113s3/sunxi_spi.h main.h include/string.h include/types.h include/io.h include/types.h lib/debug.h lib/xformat.h arch/arm32/mach-t113s3/sunxi_gpio.h arch/arm32/mach-t113s3/sunxi_usart.h arch/arm32/mach-t113s3/sunxi_sdhci.h
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+arch/arm32/mach-t113s3/dram.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build-sdmmc/lib/string.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-11-12 15:50:33.878246604
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build-sdmmc/arch/arm32/mach-t113s3/sdmmc.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-11-12 15:50:34.466211864
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+arch/arm32/include/arm32.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build-all/lib/fatfs/ff.o: build-all/board.h lib/fatfs/ff.c build-all/board.h arch/arm32/mach-t113s3/dram.h arch/arm32/mach-t113s3/sunxi_spi.h main.h include/string.h include/types.h include/io.h include/types.h lib/debug.h lib/xformat.h arch/arm32/mach-t113s3/sunxi_gpio.h arch/arm32/mach-t113s3/sunxi_usart.h arch/arm32/mach-t113s3/sunxi_sdhci.h lib/fatfs/ff.h lib/fatfs/ffconf.h lib/fatfs/diskio.h
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+.PHONY: tools git begin build mkboot clean format
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build-sdmmc/arch/arm32/mach-t113s3/sunxi_clk.o: build-sdmmc/board.h arch/arm32/mach-t113s3/sunxi_clk.c build-sdmmc/board.h arch/arm32/mach-t113s3/dram.h arch/arm32/mach-t113s3/sunxi_spi.h main.h include/string.h include/types.h include/io.h include/types.h lib/debug.h lib/xformat.h arch/arm32/mach-t113s3/sunxi_gpio.h arch/arm32/mach-t113s3/sunxi_usart.h arch/arm32/mach-t113s3/sunxi_sdhci.h board.h arch/arm32/mach-t113s3/sunxi_clk.h arch/arm32/mach-t113s3/reg-ccu.h
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build-sdmmc/arch/arm32/mach-t113s3/start.o: build-sdmmc/board.h arch/arm32/mach-t113s3/start.S arch/arm32/include/linkage.h
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build-all/arch/arm32/mach-t113s3/sunxi_clk.o: build-all/board.h arch/arm32/mach-t113s3/sunxi_clk.c build-all/board.h arch/arm32/mach-t113s3/dram.h arch/arm32/mach-t113s3/sunxi_spi.h main.h include/string.h include/types.h include/io.h include/types.h lib/debug.h lib/xformat.h arch/arm32/mach-t113s3/sunxi_gpio.h arch/arm32/mach-t113s3/sunxi_usart.h arch/arm32/mach-t113s3/sunxi_sdhci.h board.h arch/arm32/mach-t113s3/sunxi_clk.h arch/arm32/mach-t113s3/reg-ccu.h
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build-all/arch/arm32/mach-t113s3/dram.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-11-12 15:50:35.385908372
+#  File has been updated.
+#  Successfully updated.
+
+build-all/lib/fatfs/ffunicode.o: build-all/board.h lib/fatfs/ffunicode.c build-all/board.h arch/arm32/mach-t113s3/dram.h arch/arm32/mach-t113s3/sunxi_spi.h main.h include/string.h include/types.h include/io.h include/types.h lib/debug.h lib/xformat.h arch/arm32/mach-t113s3/sunxi_gpio.h arch/arm32/mach-t113s3/sunxi_usart.h arch/arm32/mach-t113s3/sunxi_sdhci.h lib/fatfs/ff.h lib/fatfs/ffconf.h
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+begin:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 40):
+	@echo "---------------------------------------------------------------"
+	@echo -n "Compiler version: "
+	@$(CC) -v 2>&1 | tail -1
+
+ 
+# Not a target:
+arch/arm32/mach-t113s3/exception.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+arch/arch.mk:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-11-11 20:47:31.819220407
+#  File has been updated.
+#  Successfully updated.
+
+build-sdmmc/lib/xformat.o: build-sdmmc/board.h lib/xformat.c build-sdmmc/board.h arch/arm32/mach-t113s3/dram.h arch/arm32/mach-t113s3/sunxi_spi.h main.h include/string.h include/types.h include/io.h include/types.h lib/debug.h lib/xformat.h arch/arm32/mach-t113s3/sunxi_gpio.h arch/arm32/mach-t113s3/sunxi_usart.h arch/arm32/mach-t113s3/sunxi_sdhci.h
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build-sdmmc/lib/fdt.o: build-sdmmc/board.h
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+arch/arm32/mach-t113s3/arch_timer.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build-spi/main.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-11-12 16:01:03.509549291
+#  File has been updated.
+#  Successfully updated.
+
+build-spi/lib/debug.o: build-spi/board.h lib/debug.c build-spi/board.h arch/arm32/mach-t113s3/dram.h arch/arm32/mach-t113s3/sunxi_spi.h main.h include/string.h include/types.h include/io.h include/types.h lib/debug.h lib/xformat.h arch/arm32/mach-t113s3/sunxi_gpio.h arch/arm32/mach-t113s3/sunxi_usart.h arch/arm32/mach-t113s3/sunxi_sdhci.h lib/debug.h board.h
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+arch/arm32/mach-t113s3/sunxi_gpio.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build-all/arch/arm32/mach-t113s3/start.o: build-all/board.h arch/arm32/mach-t113s3/start.S arch/arm32/include/linkage.h
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+arch/arm32/mach-t113s3/sunxi_usart.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+arch/arm32/mach-t113s3/reg-dram.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# files hash-table stats:
+# Load=212/1024=21%, Rehash=0, Collisions=228/1690=13%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 241 / storage = 6742 B / avg = 27 B
+# current buf: size = 8162 B / used = 6742 B / count = 241 / avg = 27 B
+
+# strcache performance: lookups = 1745 / hit rate = 86%
+# hash-table stats:
+# Load=241/8192=3%, Rehash=0, Collisions=2/1745=0%
+# Finished Make data base on Wed Nov 12 16:03:19 2025
+
+ 

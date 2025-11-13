@@ -52,5 +52,5 @@ unsigned int of_get_magic_number(void *blob);
 unsigned int of_get_dt_total_size(void *blob);
 int			 check_dt_blob_valid(void *blob);
 int			 fixup_chosen_node(void *blob, char *bootargs);
-int			 fixup_memory_node(void *blob, unsigned int *mem_bank, unsigned int *mem_size);
+int			 fixup_memory_node(void *blob, unsigned int mem_addr, unsigned int mem_size);
 #endif /* #ifndef __FDT_H__ */

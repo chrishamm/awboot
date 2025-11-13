@@ -29,6 +29,7 @@
 #include "main.h"
 #include "fdt.h"
 #include "debug.h"
+#include "board.h"
 
 #define OF_DT_TOKEN_NODE_BEGIN 0x00000001 /* Start node */
 #define OF_DT_TOKEN_NODE_END   0x00000002 /* End node */
@@ -609,9 +610,7 @@ int fixup_chosen_node(void *blob, char *bootargs)
  * - device_type: has to be "memory".
  * - reg: this property contains all the physical memory ranges of your boards.
  */
-int fixup_memory_node(void *blob,
-			unsigned int *mem_bank,
-			unsigned int *mem_size)
+int fixup_memory_node(void *blob, unsigned int mem_addr, unsigned int mem_size)
 {
 	int nodeoffset;
 	unsigned int data[2];
@@ -638,8 +637,8 @@ int fixup_memory_node(void *blob,
 
 	/* set "reg" property */
 	valuelen = 8;
-	data[0] = swap_uint32(*mem_bank);
-	data[1] = swap_uint32(*mem_size);
+	data[0] = swap_uint32(mem_addr);
+	data[1] = swap_uint32(mem_size);
 
 	ret = of_set_property(blob, nodeoffset, "reg", data, valuelen);
 	if (ret) {

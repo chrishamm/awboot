@@ -321,6 +321,10 @@ _spi:
 #if defined(CONFIG_BOOT_SDCARD) || defined(CONFIG_BOOT_MMC)
 _boot:
 #endif
+	/* Fix up memory info */
+	info("Fixing memory node in FDT...\r\n");
+	fixup_memory_node(image.of_dest, (unsigned int)SDRAM_BASE, (unsigned int)CONFIG_MEM_SIZE);
+
 	/* Boot through OP-TEE if loaded from SPI-NAND */
 	info("Initializing OP-TEE...\r\n");
 

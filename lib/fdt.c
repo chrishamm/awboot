@@ -673,20 +673,12 @@ int fixup_memory_node(void *blob, unsigned int mem_addr, unsigned int mem_size)
 		}
 	}
 
-	debug("DT: Found memory node, nodeoffset=%d\r\n", nodeoffset);
-
 	/*
-	 * if the property doesn't exit, add it
-	 * if the property exists, update it.
+	 * Update memory region in the reg property.
+	 * Note: We skip updating device_type as it should already be correct in the DTB,
+	 * and string literals may not be accessible after DRAM init (especially for SPI-NAND boot).
 	 */
-	/* set "device_type" property */
-	ret = of_set_property(blob, nodeoffset,
-			"device_type", "memory", sizeof("memory"));
-	if (ret) {
-		debug("DT: could not set device_type property\n");
-		return ret;
-	}
-
+	
 	/* set "reg" property */
 	/* The reg property format depends on #address-cells and #size-cells of the parent
 	 * For systems with #address-cells=2 and #size-cells=2, we need 16 bytes

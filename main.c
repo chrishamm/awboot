@@ -321,13 +321,12 @@ _spi:
 #if defined(CONFIG_BOOT_SDCARD) || defined(CONFIG_BOOT_MMC)
 _boot:
 #endif
-	/* Fix up memory info */
-	info("Fixing memory node in FDT...\r\n");
+	/* Fix up memory info in FDT */
 	if (fixup_memory_node(image.of_dest, (unsigned int)SDRAM_BASE, (unsigned int)CONFIG_MEM_SIZE) != 0) {
 		warning("Could not fix memory node\r\n");
 	}
 
-	/* Boot through OP-TEE if loaded from SPI-NAND */
+	/* Boot through OP-TEE */
 	info("Initializing OP-TEE...\r\n");
 
 	/* Write the "RAW" signature that OP-TEE checks at offset 0xED
